@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rock+3D&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+  <style>#container{
+    height: 100svh;
+    background-color: rgb(93, 110, 55);
+    padding-top: 80px;
+}
+#keyboard{
+margin-left: 170px;
+
+    width: 900px;
+    height: 400px;
+    background-color: rgb(32, 24, 24);
+    border: 4px solid rgb(247, 255, 248);
+    border-radius: 20px;
+    display: block;
+    padding-top: 55px;
+}
+#buttons{
+    margin-left: 15px;
+    text-align: center;
+    align-items: center;
+    line-height:0%;
+    width: 50px;
+    height: 32px;
+    background-color: aquamarine;
+    border: 2px solid rgb(45, 118, 21);
+    border-radius: 8px;
+}
+#name{
+    margin-left: 530px;
+    font-family:roc;
+    color:rgb(192, 192, 192);
+    opacity: 1;
+  
+        font-family: "Rock 3D", system-ui;
+        font-weight: 400;
+        font-style: normal;
+      
+}
+#tataa{
+    margin-left: 550px;
+}</style>
+</head>
+<body>
+   <section id="container">
+    <div id="name"> <h1 id="g1">Um Er</h1>
+    </div>
+<div><h1 id="tataa"></h1></div>
+<div id="keyboard">
+
+</div>
+
+<button id="haaa"></button>
+
+
+</div>
+
+   </section>
+
+    <script >let textt=65;
+        for(let i=0;i<42;i++){
+            const butto= document.createElement(`button`);
+            butto.id=`a${i}`;
+            if(i<26){
+        butto.textContent=String.fromCharCode(textt+i);}
+        else if(i>=31 && i<40){butto.textContent=i-30;}
+        else if(i==26){butto.textContent="space";}
+        else if(i==27){butto.textContent=",";}
+        else if(i==28){butto.textContent=".";}
+        else if(i==29){butto.textContent=0;}
+        else if(i==40){butto.textContent="Backspace";}
+        else if(i==41){butto.textContent="Delete";}
+        
+        butto.style.backgroundColor=`grey`;
+        butto.style.width=`77px`;
+        butto.style.height=`40px`;
+        butto.style.borderRadius=`7px`;
+        butto.style.marginLeft=`11px`;
+        butto.style.marginTop=`20px`;
+        butto.style.textAlign=`center`;
+        butto.style.paddingTop=`3px`;
+        
+        butto.style.border=`1.5px solid white`;
+        
+        butto.addEventListener(`mouseenter`,function(){
+            butto.style.backgroundColor='red';
+        });
+        butto.addEventListener(`mouseleave`,function(){
+            butto.style.backgroundColor='green';
+        });
+        keyboard.appendChild(butto);
+        
+        }
+        
+        /*document.getElementById("a30").onclick= function(){
+            if(truee){
+            for(let i=0;i<26;i++){
+            let ke=document.getElementById(`a${i}`);
+            ke.textContent=String.fromCharCode(97+i);
+        }truee=false;}
+        else{
+            for(let i=0;i<26;i++){
+                let ke=document.getElementById(`a${i}`);
+                ke.textContent=String.fromCharCode(65+i);
+        }
+        truee=true;
+        }
+        */
+        //}
+        
+        
+        
+        /*const somee= document.getElementById(`tataa`).value;
+        const stored= somee;
+        //somee= String(somee);
+        console.log(typeof stored);
+        console.log(stored); */
+        
+        a30.textContent=`Caps Lock`;
+        let truee=true;
+        
+        
+        for(let i=0;i<=41;i++){ 
+        
+        let clickk=document.getElementById(`a${i}`);
+        clickk.onclick=function(){
+            let name1=document.getElementById(`tataa`) . textContent;
+            if(i<26){
+            if(truee){
+        tataa.textContent=`${name1}${String.fromCharCode(65+i)}`;}
+        else{tataa.textContent=`${name1} ${String.fromCharCode(97+i)}`;}
+        }
+        
+        else if(i>30 && i<40){
+            tataa.textContent=`${name1} ${(i-30)}`;
+        }
+        else if(i==29){
+            tataa.textContent=`${name1} ${(0)}`;
+        }
+        else if(i==26){
+            let ka="  ";
+            tataa.textContent=`${name1}${ka}`;
+        }
+        else if(i==27){
+            tataa.textContent=`${name1},`;
+        }
+        else if(i==28){
+            tataa.textContent=`${name1}.`;
+        }
+        else if(i==41){
+            tataa.textContent="";
+        }
+        
+        //pending
+        
+        else if(i==40){
+        
+            let name2 = name1;
+            name1="";
+                for(let k=0;k<=name2.length-2;k++){
+        
+                 name1 =`${name1}${name2.charAt(k)}`;
+               
+        }
+        tataa.textContent=`${name1}`;
+        }//
+        
+         else if(i==30){
+        
+        
+            if(truee){
+                for(let i=0;i<26;i++){
+                let ke=document.getElementById(`a${i}`);
+                ke.textContent=String.fromCharCode(97+i);
+            }truee=false;}
+            else{
+                for(let i=0;i<26;i++){
+                    let ke=document.getElementById(`a${i}`);
+                    ke.textContent=String.fromCharCode(65+i);
+            }
+            truee=true;
+            }
+        
+         }
+        
+        }
+        
+        }
+        
+        
+            </script>
+</body>
+</html>
