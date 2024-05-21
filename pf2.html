@@ -6,43 +6,91 @@
     <title>My portfolio  website</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
   <style>body{background-color: hsl(210, 14%, 13%);}
-.card1{
-  width: 150px;height: 200px;
+#card1{
+  width: 150px;height: 100px;background-color: red;
+}
+#pic{background:hsl(210, 14%, 13%);border: none;}
+#cont{width: fit-content;background-color: transparent;
+display: flex;flex-direction: column;column-gap: 5px;row-gap: 12px;}
+.child{display: flex;flex-direction: row;}
+.ic{width: 40px;height: 40px;border-radius:10px ;margin-right: 10px;
+filter: invert(100%);
 }
 
+.navbar-brand{color: rgb(221, 167, 97); font-size: large;font-weight: bold;}
+.card-title{font-size: 2rem;color: hsl(0, 0%, 70%);font-weight: bolder;text-shadow: 1px 2px 3px rgb(0, 0, 0);}
+#card-title1{font-size: 3rem;color: hsl(0, 0%, 70%);font-weight: bolder;text-shadow: 1px 2px 3px black;width: fit-content;box-shadow: 3px 1px 9px black;}
+  .card-text{font-size: 1.1rem;color: white;font-weight: bolder;text-shadow: 1px .1px 2.5px white;}
+  #a1{
+filter: drop-shadow(10px 7px 10px black);
+  }#accordionExample{background-color: transparent;}.accordion-item{background-color: transparent;border: none;}
+  .accordion-body{background-color: none;color: white;border: none;}
+  .accordion-button{background:rgba(131, 146, 173, 0.1);color: green;border: none;}
+  .alert{background-color: transparent;color: wheat;}
+  #skills{background-color:transparent;border: none;justify-content: baseline;}
+  
+
+  #contacts2{background-color: transparent;border:1px solid blue ;color:white; box-shadow: 2px 7px 39px hsl(240, 100%, 25%);}
+ .modal-dialog{background-color: transparent;border: 1px solid blue;box-shadow: 2px 1px 7px hsl(240, 100%, 40%);border-radius: 6px;}
+ .modal-content{background:rgba(131, 146, 173, 0.1);}
+ #exampleModalLabel{color: white;}
   </style>
   </head>
   <body>
-    <nav class="navbar navbar-expand-lg bg-body-tertiary" data-bs-theme="dark">
+    <nav class="navbar navbar-expand-lg bg-body-tertiary" data-bs-theme="dark" id="ab1">
         <div class="container-fluid">
-          <a class="navbar-brand" href="#">Um Er</a>
+          <a class="navbar-brand" href="#" id="umer">Um Er</a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div class="navbar-nav">
               <a class="nav-link active" aria-current="page" href="#">Home</a>
-              <a class="nav-link" href="#">projects</a>
+              <a class="nav-link" href="projects.html">projects</a>
               <a class="nav-link" href="#">skills</a>
-              <a class="nav-link" href="#">contact</a>
+              <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+              contacts
+              </button>
             </div>
           </div>
         </div>
       </nav>
 
+      <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="exampleModalLabel">contact anytime</h1>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" style="background-color: white;"></button>
+            </div>
+            <div class="modal-body">
+              <div id="cont" >
+                <div class="child"><img src="phone-call.png"alt="ph" class="ic"><a href="#" class="btn btn-primary">+91 9541195619</a></div>
+                <div class="child"><img src="instagram (1).png" alt="ph" class="ic"> <a href="https://www.instagram.com/ummer.04?igsh=NG9vNDNONzZqdGjl"><button type="button" class="btn btn-outline-secondary  btn-sm">Instagram</button></a>  </div>
+                <div class="child"><img src="email.png" alt="ph" class="ic"> <a href="https://mail.google.com/mail/u/0/#inbox"><button type="button" class="btn btn-outline-success btn-sm">email</button></a>  </div>
+                <div class="child"><img src="linkedin1.jpg" alt="ph" class="ic"><a href="#"><button type="button" class="btn btn-outline-info  btn-sm">linkedin</button></a>  </div>
+               
+              </div>
+            </div>
+           
+          </div>
+        </div>
+      </div>
+
+
       <div class="container my-4">
-        <div class="card mb-3" style="max-width:100%;">
-          <div id="card1" class="row g-0">
+        <div id="pic" class="card mb-3" style="max-width:100%;">
+          <div class="row g-0">
       
             <div class="col-md-8">
               <div class="card-body">
-                <h5 class="card-title">UMER RAFIQ</h5>
+                <h5 class="card-title" id="card-title1">UMER RAFIQ</h5>
                 <p class="card-text">web developer and learner.</p>
-                <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
+
               </div>
             </div>
             <div class="col-md-4">
-              <img id="a1" src="ummername.png" class="img-fluid rounded-start" alt="my_photo">
+              <img id="a1" src="InShot_20240521_131638579.png" class="img-fluid rounded-start" alt="my_photo">
             </div>
           </div>
         </div>
@@ -87,16 +135,16 @@
             </div>
           </div>
 
-          <div class="alert alert-info" role="alert">
+          <div class="alert " role="alert">
           <h1>SKILLS:</h1> 
        
 
-          <div class="row row-cols-2 row-cols-md-4 g-4">
-            <div class="col">
-              <div class="card h-100" class="card1">
-                <img src="ummername.png" class="card-img-top" alt="...">
+          <div class="row row-cols-2 row-cols-md-5 g-4">
+            <div class="col" >
+              <div class="card h-100" id="skills" >
+                <img src="java.png" class="card-img-top" alt="...">
                 <div class="card-body">
-                  <h5 class="card-title">Java</h5>
+                  <h5 class="card-title my-3">Java</h5>
                   <div class="progress" role="progressbar" aria-label="Info example" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">
                     <div class="progress-bar bg-info text-dark" style="width: 50%">50%</div>
                   </div>
@@ -105,8 +153,8 @@
             </div>
 
             <div class="col">
-              <div class="card h-100" class="card1">
-                <img src="ummername.png" class="card-img-top" alt="...">
+              <div class="card h-100" id="skills">
+                <img src="c-programming-language-logo-9B32D017B1-seeklogo.com.png" class="card-img-top" alt="...">
                 <div class="card-body">
                   <h5 class="card-title">C</h5>
                   <div class="progress" role="progressbar" aria-label="Info example" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">
@@ -116,8 +164,8 @@
               </div>
             </div>
             <div class="col">
-              <div class="card h-100" class="card1">
-                <img src="ummername.png" class="card-img-top" alt="...">
+              <div class="card h-100 my-4" id="skills">
+                <img src="html-language.png" class="card-img-top" alt="...">
                 <div class="card-body">
                   <h5 class="card-title">HTML/CSS</h5>
                   <div class="progress" role="progressbar" aria-label="Info example" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">
@@ -127,8 +175,19 @@
               </div>
             </div>
             <div class="col">
-              <div class="card h-100" class="card1">
-                <img src="ummername.png" class="card-img-top" alt="...">
+              <div class="card h-100 my-3" id="skills">
+                <img src="language.png" class="card-img-top" alt="...">
+                <div class="card-body my-2">
+                  <h5 class="card-title ">PHP</h5>
+                  <div class="progress" role="progressbar" aria-label="Info example" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">
+                    <div class="progress-bar bg-info text-dark" style="width: 50%">70%</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card h-100 my-3" id="skills">
+                <img src="java-script.png" class="card-img-top" alt="...">
                 <div class="card-body">
                   <h5 class="card-title">JS</h5>
                   <div class="progress" role="progressbar" aria-label="Info example" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">
@@ -141,20 +200,23 @@
         </div>
 
 
-        <div class="card text-center">
-          <div class="card-header">
+        <div class="card text-center" id="contacts2">
+          <div class="card-header" style="border: none;">
        Contact:
           </div>
           <div class="card-body">
           
 
             <a href="#" class="btn btn-primary">+91 9541195619</a>
-           
-<button type="button" class="btn btn-outline-secondary  btn-sm">Instagram</button>
-<button type="button" class="btn btn-outline-success btn-sm">email</button>
+          
+          <a href="https://www.instagram.com/ummer.04?igsh=NG9vNDNONzZqdGjl"><button type="button" class="btn btn-outline-secondary  btn-sm">Instagram</button></a>  
+          <a href="https://mail.google.com/mail/u/0/#inbox"><button type="button" class="btn btn-outline-success btn-sm">email</button></a>  
+          <a href="#"><button type="button" class="btn btn-outline-info  btn-sm my-2">linkedin</button></a>  
 
 
-<button type="button" class="btn btn-outline-info  btn-sm">linkedin</button>
+
+
+
 
 
           </div>

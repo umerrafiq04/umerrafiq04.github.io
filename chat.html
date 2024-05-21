@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>my chatting app</title>
+    <style>body{
+        background-color: wheat;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    #container{
+       
+        background-color: rgb(71, 70, 70);
+        width: 350px;
+        height: 500px;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+      
+        padding-left: 100px;
+        padding-top: 20px;
+        border-radius: 20px;
+        box-shadow: 2px 2px 3px .6px hsla(0, 0%, 0%, 0.888);
+    }
+    #container2{
+        box-shadow: 2px 2px 3px .6px hsla(0, 0%, 0%, 0.888);
+        margin-left: 30px;
+        background-color: rgb(71, 70, 70);
+        width: 350px;
+        height: 500px;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+      border-radius: 20px;
+        padding-left: 100px;
+        padding-top: 20px;
+    }
+    #text,#text2{
+       
+    border: none;
+    width: 200px;
+    height: 30px;
+    background-color: hsla(0, 1%, 48%, 0.95);   border-radius: 6px;
+    color: black;
+    }
+    #send,#send2{
+        border: none;
+        width: 40px;
+        height: 30px;
+        border-radius: 3px;
+        background-color: lightgreen;
+    
+    }
+    #time{
+        position:absolute;
+        margin-top: 20px;
+        margin-left:0px;
+       
+    }</style>
+</head>
+<body>
+    <div id="container">
+        
+        <h3 id="time">Person 1</h3> <br> <br> <br> 
+        <input id="text" type="text" placeholder="type..."> <button id="send" onclick="message()" >send</button>
+    </div>
+    <div id="container2">
+        
+        <h3 id="time2">Person 2</h3> 
+        <input id="text2" type="text" placeholder="type..."> <button id="send2" onclick="message2()" >send</button>
+    </div>
+
+    <script >const container = document.getElementById("container");
+        const container2 = document.getElementById("container2");
+        const timee = document.getElementById("time");
+        const timee2 = document.getElementById("time2");
+        function message(){
+            let time= new Date();
+            let hr=time.getHours();
+            let min= time.getMinutes();
+        
+            timee2.textContent= `Person 2(${hr}:${min})`
+            const textt = document.getElementById("text").value;
+            let box1 = document.createElement("div");
+            box1.style.width=`${(textt.length) + (textt.length * 10)}px`;
+            box1.style.textAlign="left";
+            box1.style.padding="2px";
+            box1.style.height="25px";
+            box1.style.backgroundColor="grey";
+            box1.style.margin="26px";
+            box1.style.borderRadius="3px";
+            box1.textContent=`${textt}`;
+            box1.style.boxShadow="2px 2px 3px .6px hsla(0, 0%, 0%, 0.666)";
+        
+            let box1i = document.createElement("div");
+            box1i.style.width=`${(textt.length) + (textt.length * 10)}px`;
+            box1i.style.textAlign="left";
+            box1i.style.padding="2px";
+            box1i.style.height="25px";
+            box1i.style.backgroundColor="green";
+            box1i.style.margin="6px";
+            box1i.style.borderRadius="3px";
+            box1i.textContent=textt;
+            box1i.style.boxShadow="2px 2px 3px .6px hsla(0, 0%, 0%, 0.666)";
+        container2.append(box1);
+        container.append(box1i);
+        document.getElementById("text").value="";
+        }
+        
+        
+        
+        function message2(){
+            let time= new Date();
+            let hr=time.getHours();
+            let min= time.getMinutes();
+            timee.textContent= `Person 1(${hr}:${min})`;
+            const textt = document.getElementById("text2").value;
+            let box2 = document.createElement("div");
+            box2.style.width=`${(textt.length) + (textt.length * 10)}px`;
+            box2.style.textAlign="left";
+            box2.style.padding="2px";
+            box2.style.height="25px";
+            box2.style.backgroundColor="grey";
+            box2.style.margin="26px";
+            box2.style.borderRadius="3px";
+            box2.style.boxShadow="2px 2px 3px .6px hsla(0, 0%, 0%, 0.666)";
+        
+            box2.textContent=textt;  
+            let box2i = document.createElement("div");
+            box2i.style.width=`${(textt.length) + (textt.length * 10)}px`;
+            box2i.style.textAlign="left";
+            box2i.style.padding="2px";
+            box2i.style.height="25px";
+            box2i.style.backgroundColor="green";
+            box2i.style.margin="6px";
+            box2i.style.borderRadius="3px";
+            box2i.textContent=textt;
+            box2i.style.boxShadow="2px 2px 3px .6px hsla(0, 0%, 0%, 0.666)";
+        container.append(box2);
+        container2.append(box2i);
+        document.getElementById("text2").value="";
+        }</script>
+</body>
+</html>
