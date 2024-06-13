@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+   <style>
+    body{margin: 0;left: 0;
+        background-color: hsl(240, 100%, 17%);}
+#a1{background-color: cadetblue;
+transform: rotateY(104deg);
+perspective: 200px;
+}
+.card{overflow: hidden; transition:all  ease 1s;text-align: right;margin-left: -30px;
+background-color: hsl(256, 75%, 42%);
+box-shadow: 1px 1px 2px aqua;
+
+   color: aqua;
+   
+}
+#card1{margin-top: 10px;
+   margin-left: 400px;
+
+   transition:all  ease 1s;
+
+   background-color:rgba(255, 255, 255, .3);
+   color: aqua;
+   text-shadow: 1px 1px 12px;
+  box-shadow: 0px 0px 6px aqua;
+  text-align: center;
+}
+   </style>
+</head>
+<body>
+    <div class="container" >
+      <div class="row" >
+<div class="col ">
+<div class="row mt-1 "><div class="card" style="width: 30%;" id="a" onclick="right(1)">Java</div></div>
+<div class="row mt-1 "><div class="card" style="width: 30%;" onclick="right(2)">HTML</div></div>
+<div class="row mt-1 "><div class="card" style="width: 30%;" onclick="right(3)">JS</div></div>
+<div class="row mt-1 "><div class="card" style="width: 30%;" onclick="right(4)">PHP</div></div>
+<div class="row mt-1 "><div class="card" style="width: 30%;" onclick="right(5)">SQL</div></div>
+
+
+</div>
+
+
+
+<div class="col " style="overflow: hidden;">
+ 
+
+    <div class="card" style="width:60%;" id="card1" >
+        <img src="ummername.png" class="card-img-top" alt="..." style="height: 30%;width: 20%;">
+        <div class="card-body">
+          <h5 class="card-title"  id="lang" >Card title</h5>
+          <p class="card-text" id="desc">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        
+        </div>
+      </div>
+
+
+
+
+</div>
+      </div>
+      </div>
+       
+<div style="width: 50px;height: 50px;"id="a1">uumer</div>
+   
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+ <script>
+
+card1=document.getElementById("card1");
+lang=document.getElementById("lang");
+desc=document.getElementById("desc");
+cards=document.getElementsByClassName("card");
+t=0;
+ function right(text){
+card1.style.display="block";
+card1.style.marginLeft="0px";
+t+=180;
+switch(text){
+    case 1: 
+    for(i=0;i<=4;i++){
+if(i==0){ cards[i].style.marginLeft="0px";
+
+}
+else{
+    cards[i].style.marginLeft="-30px";
+}
+
+    }
+  
+  card1.style.transform=`rotateY(${t}deg)`; 
+  setTimeout( ()=>{lang.innerHTML="hey";desc.innerHTML="abc"},420);
+  
+    break;
+    case 2: 
+    card1.style.transform=`rotateY(${t}deg)`; 
+    for(i=0;i<=4;i++){
+if(i==1){ cards[i].style.marginLeft="0px";
+}
+else{
+    cards[i].style.marginLeft="-30px";
+}
+}
+        
+setTimeout( ()=>{card1.innerHTML="hey1"},420);
+   
+    break;
+    case 3:    card1.style.transform=`rotateY(${t}deg)`; 
+    
+    for(i=0;i<=4;i++){
+if(i==2){ cards[i].style.marginLeft="0px";
+}
+else{
+    cards[i].style.marginLeft="-30px";
+}
+
+    }
+    setTimeout( ()=>{card1.innerHTML="hey2"},420);
+ 
+
+    break;
+    case 4:  card1.style.transform=`rotateY(${t}deg)`; 
+        setTimeout( ()=>{card1.innerHTML="hey3"},420);
+    for(i=0;i<=4;i++){
+if(i==3){ cards[i].style.marginLeft="0px";
+}
+else{
+    cards[i].style.marginLeft="-30px";
+}
+
+    }
+ 
+    break;
+    case 5:  card1.style.transform=`rotateY(${t}deg)`; 
+    setTimeout( ()=>{card1.innerHTML="hey4"},420);
+    for(i=0;i<=4;i++){
+if(i==4){ cards[i].style.marginLeft="0px";
+}
+else{
+    cards[i].style.marginLeft="-30px";
+}
+
+    }
+    
+    break;
+
+}
+
+ }
+
+
+ 
+
+ </script>
+</body>
+</html>

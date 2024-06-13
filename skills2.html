@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <title>Document</title>
+    <style>
+        .card{background-color: brown;
+        flex-grow: 2;
+        height: 119px;
+        margin: 2px 2px;
+        overflow: hidden;
+        animation: card2 4s linear .5s 1 forwards;
+        }
+        #card1{
+            background-color: burlywood;
+            margin-top: 130px;
+            transition:all 2s linear 1;
+            height: 40px;
+            animation: card1 4s linear .5s 1 forwards ;
+        }
+       @keyframes card1 {
+        0% {margin-top:100px;}
+        20% {margin-top:85px; display: block;}
+        40% {margin-top:70px; display: block;}
+        60% {margin-top:60px; display: block;}
+        80% {margin-top:70px;height: 40px; display: block;}
+        90% {margin-top:90px;height: 40px; display: block;}
+        100% {margin-top:110px; height: 40px; display: block;}
+       }
+       @keyframes card2 {
+        40% { overflow: visible;}
+        50% { overflow: visible;}
+        60% { overflow: visible;}
+        70% { overflow: visible;}
+        80% { overflow: visible;}
+        90% { overflow: visible;}
+        100% { overflow:visible;}
+       
+        
+       }
+    </style>
+</head>
+<body>
+    <div class="container" style="display: flex;flex-direction: row;background-color: aquamarine;height: 400px;">
+<div class="card"><div id="card1">b</div></div>
+<div class="card">a</div>
+<div class="card">a</div>
+<div class="card">a</div>
+<div class="card">a</div>
+    </div>
+
+    <script>
+card=document.getElementsByClassName("card");
+card[0].addEventListener("mouseover",()=>{
+
+
+})
+
+    </script>
+</body>
+</html>
