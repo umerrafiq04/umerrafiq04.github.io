@@ -290,7 +290,7 @@
   transition: transform 300ms ease;
   z-index: 5;
  display: flex;
-  justify-content:space-between;
+  justify-content:space-around;
   align-items: center;
   flex-direction: row;
 width: 100%;
@@ -398,7 +398,7 @@ overflow: scroll;
 
 <div>
     <div id="parent" style="margin: 4px 10px;"></div>
-    <div id="complete"  style="margin: 4px 10px;width: 100%;height:fit-content;position:absolute;display: none;margin-left: 0px;"></div>
+    <div id="complete"  style="margin: 4px 20px;width: 100%;height:fit-content;position:absolute;display: none;margin-left: 0px;"></div>
   
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
@@ -456,7 +456,11 @@ console.log(`Month: ${month}`);
 
     this.closest(".notification1").style.backgroundColor="blue";
     let son=this.closest(".notification1");
-    son.style.padding="5px 5px"
+    //son.style.padding="5px 5px";
+    son.style.margin="1px 10px";
+    son.style.width="90%";
+    son.style.marginBottom="9px";
+
     const c = son.querySelector(".notititle1");
 
 
@@ -499,7 +503,7 @@ console.log(`Month: ${month}`);
     deletee.style.height = "50px";
     deletee.style.fontSize="1rem";
     deletee.style.fontWeight="bolder";
-    deletee.style.marginLeft = "20px";
+    //deletee.style.marginLeft = "20px";
     deletee.style.color = "white";
     deletee.style.backgroundColor = "transparent";
     deletee.style.border="none";
@@ -510,7 +514,7 @@ console.log(`Month: ${month}`);
     complete.style.height = "50px";
     complete.style.fontSize="1rem";
     complete.style.fontWeight="bolder";
-    complete.style.marginLeft = "20px";
+    //complete.style.marginLeft = "20px";
     complete.style.color = "green";
     complete.style.backgroundColor = "transparent";
     complete.style.border="none";
@@ -524,8 +528,9 @@ console.log(`Month: ${month}`);
   
     notititle.textContent = `${heading} ` ;
     notibody.textContent = note;
-    cont.style.display="flex";
-    cont.style.flexDirection="row";
+    // cont.style.display="flex";
+    // cont.style.flexDirection="row";
+   
     // cont.style.backgroundColor="yellow";
     //notititle.style.justifyContent="space-between";
   cont.appendChild(deletee);
