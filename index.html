@@ -1,1040 +1,187 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>My portfolio  website</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-  <style>body{background-color: hsl(210, 14%, 13%);}
-#card1{
-  width: 150px;height: 100px;background-color: red;
-}
-#pic{background:hsl(210, 14%, 13%);border: none;}
-#cont{width: fit-content;background-color: transparent;
-display: flex;flex-direction: column;column-gap: 5px;row-gap: 12px;}
-.child{display: flex;flex-direction: row;}
-.ic{width: 40px;height: 40px;border-radius:10px ;margin-right: 10px;
-filter: invert(100%);
-}
-
-.navbar-brand{color: rgb(221, 167, 97); font-size: large;font-weight: bold;}
-.card-title{font-size: 2rem;color: hsl(0, 0%, 70%);font-weight: bolder;text-shadow: 1px 2px 3px rgb(0, 0, 0);}
-#card-title1{font-size: 3rem;color: hsl(0, 0%, 70%);font-weight: bolder;text-shadow: 1px 2px 3px black;width: fit-content;box-shadow: 3px 1px 9px black;}
-  .card-text{font-size: 1.1rem;color: white;font-weight: bolder;text-shadow: 1px .1px 2.5px white;}
-  #a1{
-filter: drop-shadow(10px 7px 10px black);
-  }#accordionExample{background-color: transparent;}.accordion-item{background-color: transparent;border: none;}
-  .accordion-body{background-color: none;color: white;border: none;}
-  .accordion-button{background:rgba(131, 146, 173, 0.1);color: green;border: none;}
-  .alert{background-color: transparent;color: wheat;}
-  #skills{background-color:transparent;border: none;justify-content: baseline;}
-  
-
-  #contacts2{background-color: transparent;color:white;border: none;}
- .modal-dialog{background-color: transparent;border:none;}
- .modal-content{background:transparent}
- #exampleModalLabel{color: white;}
- .list-group-item{
-  background: transparent !important;color: white;
- }
-  .a1:hover{
-
-  color: green !important;
-z-index: 1;
-
- }
-
- .btn-shine {
-  position: absolute;
-  top: 20%;
-  left: 36%;
-  transform: translate(-50%, -50%);
-  padding: 12px 8px;
-  color: #fff;
-  background: linear-gradient(to right, #9f9f9f 0, #fff 10%, #868686 20%);
-  background-position: 0;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  animation: shine 3s infinite linear;
-  animation-fill-mode: forwards;
-  -webkit-text-size-adjust: none;
-  font-weight: 600;
-  font-size: 16px;
-  text-decoration: none;
-  white-space: nowrap;
-  font-family: "Poppins", sans-serif;
-}
-@-moz-keyframes shine {
-  0% {
-    background-position: 0;
-  }
-  60% {
-    background-position: 180px;
-  }
-  100% {
-    background-position: 180px;
-  }
-}
-@-webkit-keyframes shine {
-  0% {
-    background-position: 0;
-  }
-  60% {
-    background-position: 180px;
-  }
-  100% {
-    background-position: 180px;
-  }
-}
-@-o-keyframes shine {
-  0% {
-    background-position: 0;
-  }
-  60% {
-    background-position: 180px;
-  }
-  100% {
-    background-position: 180px;
-  }
-}
-@keyframes shine {
-  0% {
-    background-position: 0;
-  }
-  60% {
-    background-position: 180px;
-  }
-  100% {
-    background-position: 180px;
-  }
-}
-.wrapper {
-  display: inline-flex;
-  list-style: none;
-  height: 120px;
-  width: 100%;
-  padding-top: 40px;
-  font-family: "Poppins", sans-serif;
-  justify-content: center;
-}
-
-.wrapper .icon {
-  position: relative;
-  background: #fff;
-  border-radius: 50%;
-  margin: 10px;
-  width: 50px;
-  height: 50px;
-  font-size: 18px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
-  cursor: pointer;
-  transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-}
-
-.wrapper .tooltip {
-  position: absolute;
-  top: 0;
-  font-size: 14px;
-  background: #fff;
-  color: #fff;
-  padding: 5px 8px;
-  border-radius: 5px;
-  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
-  opacity: 0;
-  pointer-events: none;
-  transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-}
-
-.wrapper .tooltip::before {
-  position: absolute;
-  content: "";
-  height: 8px;
-  width: 8px;
-  background: #fff;
-  bottom: -3px;
-  left: 50%;
-  transform: translate(-50%) rotate(45deg);
-  transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-}
-
-.wrapper .icon:hover .tooltip {
-  top: -45px;
-  opacity: 1;
-  visibility: visible;
-  pointer-events: auto;
-}
-
-.wrapper .icon:hover span,
-.wrapper .icon:hover .tooltip {
-  text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.1);
-}
-
-.wrapper .facebook:hover,
-.wrapper .facebook:hover .tooltip,
-.wrapper .facebook:hover .tooltip::before {
-  background: #1877f2;
-  color: #fff;
-}
-
-.wrapper .twitter:hover,
-.wrapper .twitter:hover .tooltip,
-.wrapper .twitter:hover .tooltip::before {
-  background: #1da1f2;
-  color: #fff;
-}
-
-.wrapper .instagram:hover,
-.wrapper .instagram:hover .tooltip,
-.wrapper .instagram:hover .tooltip::before {
-  background: #e4405f;
-  color: #fff;
-}
-.btn-53,
-.btn-53 *,
-.btn-53 :after,
-.btn-53 :before,
-.btn-53:after,
-.btn-53:before {
-  border: none;
-
-}
-
-.btn-53 {
-  -webkit-tap-highlight-color: transparent;
-  -webkit-appearance: button;
-  background:transparent;
-  background-image: none;
-  color: #fff;
-  cursor: pointer;
-  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
-    Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif,
-    Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
-  font-size: small;
-  line-height: .023;
-  margin: 0;
-  -webkit-mask-image: -webkit-radial-gradient(#000, #fff);
-  padding: 0;
-}
-
-.btn-53:disabled {
-  cursor: default;
-}
-
-.btn-53:-moz-focusring {
-  outline: auto;
-}
-
-.btn-53 svg {
-  display: block;
-  vertical-align: middle;
-}
-
-.btn-53 [hidden] {
-  display: none;
-}
-
-.btn-53 {
- 
-  border-radius: 999px;
-  box-sizing: border-box;
-  display: block;
-  font-weight: 900;
-  overflow: hidden;
-  padding: 1.2rem 3rem;
-  position: relative;
-  text-transform: uppercase;
-}
-
-.btn-53 .original {
-  background: transparent;
-  color: #000;
-  display: grid;
-  inset: 0;
-  place-content: center;
-  position: absolute;
-  transition: transform 0.2s cubic-bezier(0.87, 0, 0.13, 1);
-}
-
-.btn-53:hover .original {
-  transform: translateY(100%);
-}
-
-.btn-53 .letters {
-  display: inline-flex;
-}
-
-.btn-53 span {
-  opacity: 0;
-  transform: translateY(-15px);
-  transition: transform 0.2s cubic-bezier(0.87, 0, 0.13, 1), opacity 0.2s;
-}
-
-.btn-53 span:nth-child(2n) {
-  transform: translateY(15px);
-}
-
-.btn-53:hover span {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-.btn-53:hover span:nth-child(2) {
-  transition-delay: 0.1s;
-}
-
-.btn-53:hover span:nth-child(3) {
-  transition-delay: 0.2s;
-}
-
-.btn-53:hover span:nth-child(4) {
-  transition-delay: 0.3s;
-}
-
-.btn-53:hover span:nth-child(5) {
-  transition-delay: 0.4s;
-}
-
-.btn-53:hover span:nth-child(6) {
-  transition-delay: 0.5s;
-}
-
-.cardd {
-  width: 100%;
-  margin-top: 8px;
-  background:transparent;
-  box-shadow: 0 2px 5px rgba(126, 121, 121, 0.1);
-  border-radius: 10px;
-  color: white;
-  overflow: hidden;
-}
-
-.header {
-  background-color: #333;
-  color: #fff;
-  padding: 20px;
-  text-align: center;
-  font-size: 18px;
-}
-
-.body {
-  padding: 20px;
-}
-
-.skill {
-  display: flex;
-  align-items: center;
-  margin-bottom: 20px;
-}
-
-.skill-name {
-  width: 120px;
-  font-size: 16px;
-}
-
-.skill-level {
-  width: 160px;
-  height: 10px;
-  background-color: #eee;
-  border-radius: 10px;
-  overflow: hidden;
-  margin-left: 20px;
-}
-
-.skill-percent {
-  background-color: #333;
-  height: 100%;
-}
-
-.skill-percent-number {
-  margin-left: 20px;
-  font-size: 16px;
-}
-
-ul {
-  list-style: none;
-}
-
-.example-2 {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.example-2 .icon-content {
-  margin: 0 10px;
-  position: relative;
-}
-.example-2 .icon-content .tooltip {
-  position: absolute;
-  top: -30px;
-  left: 50%;
-  transform: translateX(-50%);
-  color: #fff;
-  padding: 6px 10px;
-  border-radius: 5px;
-  opacity: 0;
-  visibility: hidden;
-  font-size: 14px;
-  transition: all 0.3s ease;
-}
-.example-2 .icon-content:hover .tooltip {
-  opacity: 1;
-  visibility: visible;
-  top: -50px;
-}
-.example-2 .icon-content a {
-  position: relative;
-  overflow: hidden;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  color: #4d4d4d;
-  background-color: #fff;
-  transition: all 0.3s ease-in-out;
-}
-.example-2 .icon-content a:hover {
-  box-shadow: 3px 2px 45px 0px rgb(0 0 0 / 12%);
-}
-.example-2 .icon-content a svg {
-  position: relative;
-  z-index: 1;
-  width: 30px;
-  height: 30px;
-}
-.example-2 .icon-content a:hover {
-  color: white;
-}
-.example-2 .icon-content a .filled {
-  position: absolute;
-  top: auto;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 0;
-  background-color: #000;
-  transition: all 0.3s ease-in-out;
-}
-.example-2 .icon-content a:hover .filled {
-  height: 100%;
-}
-
-.example-2 .icon-content a[data-social="linkedin"] .filled,
-.example-2 .icon-content a[data-social="linkedin"] ~ .tooltip {
-  background-color: #0274b3;
-}
-
-.example-2 .icon-content a[data-social="github"] .filled,
-.example-2 .icon-content a[data-social="github"] ~ .tooltip {
-  background-color: #24262a;
-}
-.example-2 .icon-content a[data-social="instagram"] .filled,
-.example-2 .icon-content a[data-social="instagram"] ~ .tooltip {
-  background: linear-gradient(
-    45deg,
-    #405de6,
-    #5b51db,
-    #b33ab4,
-    #c135b4,
-    #e1306c,
-    #fd1f1f
-  );
-}
-.example-2 .icon-content a[data-social="youtube"] .filled,
-.example-2 .icon-content a[data-social="youtube"] ~ .tooltip {
-  background-color: #ff0000;
-}
-.form-container {
-  width: 400px;
-  background: linear-gradient(#212121, #212121) padding-box,
-              linear-gradient(145deg, transparent 35%,#e81cff, #40c9ff) border-box;
-  border: 2px solid transparent;
-  padding: 32px 24px;
-  font-size: 14px;
-  font-family: inherit;
-  color: white;
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  box-sizing: border-box;
-  border-radius: 16px;
-  background-size: 200% 100%;
-  animation: gradient 5s ease infinite;
-}
-
-@keyframes gradient {
-  0% {
-    background-position: 0% 50%;
-  }
-
-  50% {
-    background-position: 100% 50%;
-  }
-
-  100% {
-    background-position: 0% 50%;
-  }
-}
-
-.form-container button:active {
-  scale: 0.95;
- width: 20%;
-  
-}
-
-.form-container .form {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-
-}
-
-.form-container .form-group {
-  display: flex;
-  flex-direction: column;
-  gap: 2px;
-
-}
-
-.form-container .form-group label {
-  display: block;
-  margin-bottom: 5px;
-  color: #717171;
-  font-weight: 600;
-  font-size: 12px;
-}
-
-.form-container .form-group input {
-  width: 100%;
-  padding: 12px 16px;
-  border-radius: 8px;
-  color: #fff;
-  font-family: inherit;
-  background-color: transparent;
-  border: 1px solid #414141;
-}
-
-.form-container .form-group textarea {
-  width: 100%;
-  padding: 12px 16px;
-  border-radius: 8px;
-  resize: none;
-  color: #fff;
-  height: 96px;
-  border: 1px solid #414141;
-  background-color: transparent;
-  font-family: inherit;
-}
-
-.form-container .form-group input::placeholder {
-  opacity: 0.5;
-}
-
-.form-container .form-group input:focus {
-  outline: none;
-  border-color: #e81cff;
-}
-
-.form-container .form-group textarea:focus {
-  outline: none;
-  border-color: #e81cff;
-}
-
-.form-container .form-submit-btn {
-  display: flex;
-  align-items: flex-start;
-  justify-content: center;
-  align-self: flex-start;
-  font-family: inherit;
-  color: #717171;
-  font-weight: 600;
-  width: 40%;
-  background: #313131;
-  border: 1px solid #414141;
-  padding: 12px 16px;
-  font-size: inherit;
-  gap: 8px;
-  margin-top: 8px;
-  cursor: pointer;
-  border-radius: 6px;
-}
-
-.form-container .form-submit-btn:hover {
-  background-color: #fff;
-  border-color: #fff;
-}
-
-
-
-
-/* This is an example, feel free to delete this code */
-.tooltip-container {
-  margin-top: 30%;
-  --background: #333333;
-  --color: #e8e8e8;
-  position: relative;
-  cursor: pointer;
-  transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
-  font-size: 18px;
-  font-weight: 600;
-  color: var(--color);
-  padding: 0.7em 1.8em;
-  border-radius: 8px;
-  text-transform: uppercase;
-  height: 60px;
-  width: 180px;
-  display: grid;
-  place-items: center;
-  border: 2px solid var(--color);
-}
-
-.text {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  display: grid;
-  place-items: center;
-  transform-origin: -100%;
-  transform: scale(1);
-  transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
-}
-
-.tooltip-container span:last-child {
-  position: absolute;
-  top: 0%;
-  left: 100%;
-  width: 100%;
-  height: 100%;
-  border-radius: 8px;
-  opacity: 1;
-  background-color: var(--background);
-  z-index: -1;
-  border: 2px solid var(--background);
-  transform: scale(0);
-  transform-origin: 0;
-  transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
-  display: grid;
-  place-items: center;
-}
-
-.tooltip {
-  position: absolute;
-  top: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  padding: 0.3em 0.6em;
-  opacity: 0;
-  pointer-events: none;
-  transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
-  background: var(--background);
-  z-index: -1;
-  border-radius: 8px;
-  scale: 0;
-  transform-origin: 0 0;
-  text-transform: capitalize;
-  font-weight: 400;
-  font-size: 16px;
-  box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
-}
-
-.tooltip::before {
-  position: absolute;
-  content: "";
-  height: 0.6em;
-  width: 0.6em;
-  bottom: -0.2em;
-  left: 50%;
-  transform: translate(-50%) rotate(45deg);
-  background: var(--background);
-}
-
-.tooltip-container:hover .tooltip {
-  top: -100%;
-  opacity: 1;
-  visibility: visible;
-  pointer-events: auto;
-  scale: 1;
-  animation: shake 0.5s ease-in-out both;
-}
-
-.tooltip-container:hover {
-  box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
-  color: white;
-  border-color: transparent;
-}
-
-.tooltip-container:hover span:last-child {
-  transform: scale(1);
-  left: 0;
-}
-
-.tooltip-container:hover .text {
-  opacity: 0;
-  top: 0%;
-  left: 100%;
-  transform: scale(0);
-}
-
-@keyframes shake {
-  0% {
-    rotate: 0;
-  }
-
-  25% {
-    rotate: 7deg;
-  }
-
-  50% {
-    rotate: -7deg;
-  }
-
-  75% {
-    rotate: 1deg;
-  }
-
-  100% {
-    rotate: 0;
-  }
-}
-
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Umer Rafiq | AI & ML Engineer</title>
+
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      background-color: #0f172a;
+      font-family: 'Poppins', sans-serif;
+      color: #e5e7eb;
+    }
+
+    .navbar-brand {
+      color: #38bdf8 !important;
+      font-weight: 700;
+    }
+
+    .hero {
+      padding: 60px 0;
+    }
+
+    .hero img {
+      max-width: 100%;
+      border-radius: 16px;
+      box-shadow: 0 10px 30px rgba(0,0,0,.6);
+    }
+
+    .badge-skill {
+      background: rgba(56,189,248,.15);
+      color: #38bdf8;
+      margin: 6px;
+      padding: 8px 14px;
+      border-radius: 20px;
+      font-size: 14px;
+      display: inline-block;
+    }
+
+    .section-title {
+      font-size: 28px;
+      font-weight: 700;
+      margin-bottom: 20px;
+      color: #38bdf8;
+    }
+
+    .card {
+      background: #020617;
+      border: none;
+      border-radius: 14px;
+      box-shadow: 0 8px 20px rgba(0,0,0,.5);
+    }
+
+    .social a {
+      margin: 0 12px;
+      color: #e5e7eb;
+      font-size: 18px;
+      transition: .3s;
+      text-decoration: none;
+    }
+
+    .social a:hover {
+      color: #38bdf8;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      color: #94a3b8;
+    }
   </style>
-  </head>
-  <body>
-    <nav class="navbar navbar-expand-lg bg-body-tertiary" data-bs-theme="dark" id="ab1">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="#" id="umer">Um Er</a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-            <div class="navbar-nav">
-            
-              <a class="nav-link" href="project.html"><button class="btn-53">
-                <div class="original">Projects</div>
-                <div class="letters">
-                  
-                  <span>P</span>
-                  <span>r</span>
-                  <span>o</span>
-                  <span>j</span>
-                  <span>e</span>
-                  <span>c</span>
-                  <span>t</span>
-                  <span>s</span>
-                </div>
-              </button>
-              </a>
-              <a class="nav-link" href="#skills"><button class="btn-53">
-                <div class="original">Skills</div>
-                <div class="letters">
-                  
-                  <span>S</span>
-                  <span>k</span>
-                  <span>i</span>
-                  <span>l</span>
-                  <span>l</span>
-                  <span>s</span>
-                </div>
-              </button></a>
+</head>
 
-              <button type="button" class="btn-53" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                <div class="original">Message</div>
-                <div class="letters">
-                  
-                  <span>M</span>
-                  <span>E</span>
-                  <span>S</span>
-                  <span>S</span>
-                  <span>a</span>
-                  <span>G</span>
-                  <span>E</span>
-               
-                </div>
-              </button>
+<body>
 
-              
-            </div>
-          </div>
-        </div>
-      </nav>
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg navbar-dark">
+  <div class="container">
+    <a class="navbar-brand" href="#">Umer Rafiq</a>
+    <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#nav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="nav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+        <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
 
+<!-- HERO -->
+<section class="hero container">
+  <div class="row align-items-center">
+    <div class="col-md-7">
+      <h1 class="fw-bold">
+        Hi, I'm <span style="color:#38bdf8">Umer Rafiq</span>
+      </h1>
 
-      
-      <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-          <div class="modal-content">
-          
-           <div class="modal-body">
-            <div class="form-container" style="width: 100%;">
-              <form class="form"  action="https://api.web3forms.com/submit" method="POST">
-                <input type="hidden" name="access_key" value="782cbae0-38a3-4d8e-88fb-68673d172e07">
-                <div class="form-group">
-                  <label for="email">About yourself</label>
-                  <input required="" name="email" id="email" type="text">
-                </div>
-                <div class="form-group">
-                  <label for="textarea">Message</label>
-                  <textarea required="" cols="40" rows="10" id="textarea" name="textarea" >it will take some time to send a Message,keep patience </textarea>
-                </div>
-                <button type="submit" class="form-submit-btn">Send</button>
-              </form>
-            </div>
+      <h4 class="text-secondary">
+        AI / ML Engineer · Generative AI & Agentic Systems
+      </h4>
 
-           </div>
-          </div>
-        </div>
-      </div>
+      <p class="mt-3">
+        I design and build intelligent systems using
+        <b>Machine Learning, Deep Learning, Generative AI, and Agentic AI</b>.
+        My work focuses on developing scalable AI-powered backends,
+        robust APIs, and data-driven solutions deployed on cloud platforms.
+      </p>
 
-
-      <div class="container my-4">
-        <div id="pic" class="card mb-3 " style="max-width:100%;">
-          <div class="row g-0 ">
-      
-            <div class="col-md-8 ">
-              <div class="card-body ">
-                <h5 class="card-title" id="card-title1">UMER RAFIQ</h5>
-                
-         <p class="btn-shine ">web developer and learner.</p>
-
-
-
-
-         <a href="https://lm.free.nf">
-         <div class="tooltip-container">
-
-          <span class="tooltip">check it</span>
-          <span class="text">Library proj</span>
-          <span>library 👋</span>
-        </div>
+      <a href="https://github.com/Umer0444" class="btn btn-info mt-3">
+        View GitHub
       </a>
+    </div>
 
+    <div class="col-md-5 text-center mt-4 mt-md-0">
+      <img src="https://images.unsplash.com/photo-1618477247222-acbdb0e159b3"
+           alt="AI Engineer">
+    </div>
+  </div>
+</section>
 
+<!-- SKILLS -->
+<section class="container my-5" id="skills">
+  <h2 class="section-title">Technical Skills</h2>
 
+  <div class="card p-4">
+    <div>
+      <span class="badge-skill">Machine Learning</span>
+      <span class="badge-skill">Deep Learning</span>
+      <span class="badge-skill">Generative AI</span>
+      <span class="badge-skill">Agentic AI</span>
+      <span class="badge-skill">FastAPI</span>
+      <span class="badge-skill">SQL</span>
+      <span class="badge-skill">AWS</span>
+      <span class="badge-skill">Python</span>
+      <span class="badge-skill">Frontend Web Development</span>
+    </div>
+  </div>
+</section>
 
+<!-- PROJECTS -->
+<section class="container my-5" id="projects">
+  <h2 class="section-title">Projects</h2>
 
+  <div class="card p-4">
+    <p>
+      My GitHub showcases projects in machine learning,
+      deep learning models, generative AI applications,
+      agent-based systems, and backend API development.
+    </p>
 
+    <a href="https://github.com/Umer0444" class="btn btn-outline-info">
+      Explore Projects
+    </a>
+  </div>
+</section>
 
+<!-- CONTACT -->
+<section class="container my-5" id="contact">
+  <h2 class="section-title">Contact</h2>
 
+  <div class="card p-4 text-center">
+    <p>Email: <b>rafiqyatooumer@gmail.com</b></p>
 
-                
-              </div>
-            </div>
-            <div class="col-md-4">
-              <img id="a1" src="InShot_20240521_131638579.png" class="img-fluid rounded-start" alt="my_photo">
-            </div>
-          </div>
-        </div>
-        
-        <div class="accordion my-4" id="accordionExample">
+    <div class="social mt-3">
+      <a href="https://www.linkedin.com/in/umer-rafiq-6410312a5" target="_blank">LinkedIn</a>
+      <a href="https://github.com/Umer0444" target="_blank">GitHub</a>
+      <a href="https://www.instagram.com/ummer.04" target="_blank">Instagram</a>
+    </div>
+  </div>
+</section>
 
-            <div class="accordion-item">
-              <h2 class="accordion-header">
-                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                  Introduction
-                </button>
-              </h2>
-              <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
-                <div class="accordion-body">
-                  <strong>
-                
-                    Umer Rafiq, a student from Budgam, Jammu and Kashmir,currently immersing myself in the realm of Computer Science and Engineering at North Campus University of Kashmir, pursuing my B.Tech degree. With a fervent desire for innovation, i have already mastered the fundamentals of web development. Now,my sights are set on pushing the boundaries of digital experiences.My ambition? To engineer futuristic websites that revolutionize user interactions.
-              </div>
-            </div>
-            <div class="accordion-item">
-              <h2 class="accordion-header">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                 Education
-                </button>
-              </h2>
-              <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-                <div class="accordion-body">
-                  <strong>
-                
-                    i achieved good results in both  10th and 12th grades, securing over 90% in each, from a nearby school. i am currently pursuing a B.Tech in CSE at North Campus, Kashmir University. Actively involved in expanding my knowledge of web development, i am eager to master advanced skills in this field to become a proficient developer.
-                </div>
-              </div>
-            </div>
-            <div class="accordion-item">
-              <h2 class="accordion-header">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-               Hobbies
-                </button>
-              </h2>
-              <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-                <div class="accordion-body">
-                  <strong>
-                   I enjoy traveling, cooking, photography, hiking, and playing cricket. Whether exploring new places, experimenting in the kitchen, capturing moments with my camera, enjoying nature, or playing sports,i find happiness in the simple pleasures of life.
-                </div>
-              </div>
-            </div>
-          </div>
+<footer>
+  © 2026 Umer Rafiq · AI & ML Portfolio
+</footer>
 
-          <div class="cardd" id="skills">
-            <div class="header">My Skill's</div>
-            <div class="body">
-              <div class="skill">
-                <div class="skill-name">HTML/CSS</div>
-                <div class="skill-level">
-                  <div class="skill-percent" style="width: 90%"></div>
-                </div>
-                <div class="skill-percent-number">80%</div>
-              </div>
-              <div class="skill">
-                <div class="skill-name">JavaScript</div>
-                <div class="skill-level">
-                  <div class="skill-percent" style="width: 80%"></div>
-                </div>
-                <div class="skill-percent-number">70%</div>
-              </div>
-              <div class="skill">
-                <div class="skill-name">Java</div>
-                <div class="skill-level">
-                  <div class="skill-percent" style="width: 75%"></div>
-                </div>
-                <div class="skill-percent-number">50%</div>
-              </div>
-              <div class="skill">
-                <div class="skill-name">C programming</div>
-                <div class="skill-level">
-                  <div class="skill-percent" style="width: 70%"></div>
-                </div>
-                <div class="skill-percent-number">70%</div>
-              </div>
-              <div class="skill">
-                <div class="skill-name">PHP</div>
-                <div class="skill-level">
-                  <div class="skill-percent" style="width: 60%"></div>
-                </div>
-                <div class="skill-percent-number">60%</div>
-              </div>
-              <div class="skill">
-                <div class="skill-name">Mysql</div>
-                <div class="skill-level">
-                  <div class="skill-percent" style="width: 60%"></div>
-                </div>
-                <div class="skill-percent-number">60%</div>
-              </div>
-            </div>
-          </div>
-          
-         
-<br> <br>
-          
-          
-          <ul class="example-2">
-            <li class="icon-content">
-              <a
-                href="https://www.linkedin.com/in/umer-rafiq-6410312a5?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
-                aria-label="LinkedIn"
-                data-social="linkedin"
-              >
-                <div class="filled"></div>
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="16"
-                  height="16"
-                  fill="currentColor"
-                  class="bi bi-linkedin"
-                  viewBox="0 0 16 16"
-                  xml:space="preserve"
-                >
-                  <path
-                    d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854zm4.943 12.248V6.169H2.542v7.225zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248S2.4 3.226 2.4 3.934c0 .694.521 1.248 1.327 1.248zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016l.016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225z"
-                    fill="currentColor"
-                  ></path>
-                </svg>
-              </a>
-              <div class="tooltip">LinkedIn</div>
-            </li>
-            <li class="icon-content">
-              <a href="https://github.com/Umer0444" aria-label="GitHub" data-social="github">
-                <div class="filled"></div>
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="16"
-                  height="16"
-                  fill="currentColor"
-                  class="bi bi-github"
-                  viewBox="0 0 16 16"
-                  xml:space="preserve"
-                >
-                  <path
-                    d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8"
-                    fill="currentColor"
-                  ></path>
-                </svg>
-              </a>
-              <div class="tooltip">GitHub</div>
-            </li>
-            <li class="icon-content">
-              <a
-                href="https://www.instagram.com/ummer.04?igsh=YzljYTk1ODg3Zg=="
-                aria-label="Instagram"
-                data-social="instagram"
-              >
-                <div class="filled"></div>
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="16"
-                  height="16"
-                  fill="currentColor"
-                  class="bi bi-instagram"
-                  viewBox="0 0 16 16"
-                  xml:space="preserve"
-                >
-                  <path
-                    d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334"
-                    fill="currentColor"
-                  ></path>
-                </svg>
-              </a>
-              <div class="tooltip">Instagram</div>
-            </li>
-            <li class="icon-content">
-              <a href="#" aria-label="Youtube" data-social="youtube">
-                <div class="filled"></div>
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-envelope" viewBox="0 0 16 16">
-                  <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1zm13 2.383-4.708 2.825L15 11.105zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741M1 11.105l4.708-2.897L1 5.383z"/>
-                </svg>
-              </a>
-              <div class="tooltip">Gmail</div>
-            </li>
-          </ul>
-          
-  <li class="icon instagram">
-    <span class="tooltip">Instagram</span>
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      height="1.2em"
-      fill="currentColor"
-      class="bi bi-instagram"
-      viewBox="0 0 16 16"
-    >
-      <path
-        d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z"
-      ></path>
-    </svg>
-  </li>
-</ul>
-
-
-
-
-
-      
-      
-
-
-     
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
-  </body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
 </html>
