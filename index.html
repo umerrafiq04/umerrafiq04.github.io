@@ -1,526 +1,429 @@
 <!doctype html>
 <html lang="en">
-
 <head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Umer Rafiq — AI/ML engineer and researcher working on agentic AI, RAG, MCP, machine learning, and intelligent systems.">
+  <meta name="theme-color" content="#07111f">
+  <title>Umer Rafiq | AI/ML Engineer & Researcher</title>
 
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 
-<title>Umer Rafiq | AI Engineer</title>
+  <style>
+    :root {
+      --bg: #07111f;
+      --bg-soft: #0b1728;
+      --panel: rgba(15, 29, 48, .72);
+      --line: rgba(148, 163, 184, .16);
+      --text: #edf4ff;
+      --muted: #9fb0c5;
+      --accent: #62d8ff;
+      --accent-2: #8b7cff;
+      --accent-3: #51f4b5;
+      --shadow: 0 24px 70px rgba(0,0,0,.28);
+    }
 
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      color: var(--text);
+      background:
+        radial-gradient(circle at 15% 10%, rgba(98,216,255,.08), transparent 28%),
+        radial-gradient(circle at 85% 18%, rgba(139,124,255,.08), transparent 30%),
+        var(--bg);
+      line-height: 1.75;
+      overflow-x: hidden;
+    }
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      opacity: .08;
+      background-image:
+        linear-gradient(rgba(255,255,255,.08) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,.08) 1px, transparent 1px);
+      background-size: 48px 48px;
+      mask-image: linear-gradient(to bottom, black 0%, transparent 70%);
+    }
 
-<style>
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { color: #b4efff; }
 
-*{
-box-sizing:border-box;
-margin:0;
-padding:0;
-}
+    .navbar {
+      background: rgba(7,17,31,.72);
+      backdrop-filter: blur(16px);
+      border-bottom: 1px solid var(--line);
+    }
+    .navbar-brand {
+      font-family: 'Space Grotesk', sans-serif;
+      font-weight: 700;
+      color: var(--text) !important;
+      letter-spacing: -.02em;
+    }
+    .nav-link { color: #c6d4e6 !important; font-weight: 500; }
+    .nav-link:hover { color: #fff !important; }
 
-body{
-font-family:'Poppins',sans-serif;
-color:#1e293b;
-background:#f8fafc;
-overflow-x:hidden;
-line-height:1.7;
-}
+    .hero {
+      min-height: 100vh;
+      display: grid;
+      place-items: center;
+      position: relative;
+      overflow: hidden;
+      padding: 130px 0 90px;
+    }
 
-/* NAVBAR */
+    .orb {
+      position: absolute;
+      border-radius: 50%;
+      filter: blur(8px);
+      opacity: .45;
+      animation: drift 12s ease-in-out infinite alternate;
+      pointer-events: none;
+    }
+    .orb.one { width: 320px; height: 320px; background: #1ac7ff; left: -80px; top: 12%; box-shadow: 0 0 100px #1ac7ff55; }
+    .orb.two { width: 260px; height: 260px; background: #7568ff; right: -70px; top: 22%; animation-delay: -4s; box-shadow: 0 0 100px #7568ff55; }
+    .orb.three { width: 180px; height: 180px; background: #36efb0; left: 52%; bottom: 4%; opacity: .16; animation-delay: -7s; }
 
-.navbar{
-background:white;
-box-shadow:0 2px 20px rgba(0,0,0,0.05);
-padding:14px 0;
-}
+    @keyframes drift {
+      from { transform: translate3d(0,0,0) scale(1); }
+      to { transform: translate3d(35px,-28px,0) scale(1.12); }
+    }
 
-.navbar-brand{
-font-weight:700;
-font-size:22px;
-color:#0ea5e9 !important;
-}
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.3fr .7fr;
+      align-items: center;
+      gap: 56px;
+      position: relative;
+      z-index: 2;
+    }
 
-.nav-link{
-font-weight:500;
-margin-left:12px;
-}
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 8px 13px;
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,.03);
+      border-radius: 999px;
+      font-size: .82rem;
+      color: #cbd8ea;
+      letter-spacing: .04em;
+    }
+    .dot { width: 8px; height: 8px; background: var(--accent-3); border-radius: 50%; box-shadow: 0 0 14px var(--accent-3); }
 
-/* HERO */
+    .hero h1 {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: clamp(3.4rem, 7vw, 6.4rem);
+      line-height: .98;
+      margin: 24px 0 20px;
+      letter-spacing: -.05em;
+      max-width: 850px;
+    }
+    .gradient-text {
+      background: linear-gradient(100deg, #9beaff 0%, #62d8ff 36%, #a59cff 70%, #65f0bc 100%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+    .hero-lead { color: #b6c6d9; font-size: 1.08rem; max-width: 760px; }
 
-.hero{
+    .hero-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 30px; }
+    .btn-main, .btn-ghost {
+      border-radius: 12px;
+      padding: 12px 18px;
+      font-weight: 600;
+      transition: .25s ease;
+    }
+    .btn-main { color: #06111c; background: linear-gradient(135deg, #8fe7ff, #67d6ff); border: 0; }
+    .btn-main:hover { color: #06111c; transform: translateY(-2px); box-shadow: 0 12px 30px rgba(98,216,255,.2); }
+    .btn-ghost { color: #e6f2ff; border: 1px solid var(--line); background: rgba(255,255,255,.04); }
+    .btn-ghost:hover { color: #fff; border-color: rgba(98,216,255,.45); transform: translateY(-2px); }
 
-min-height:100vh;
-display:flex;
-align-items:center;
-justify-content:center;
-text-align:center;
-padding-top:100px;
-position:relative;
-overflow:hidden;
+    .research-card {
+      background: linear-gradient(180deg, rgba(18,35,57,.86), rgba(11,23,40,.74));
+      border: 1px solid var(--line);
+      border-radius: 24px;
+      padding: 28px;
+      box-shadow: var(--shadow);
+      animation: cardFloat 7s ease-in-out infinite;
+    }
+    @keyframes cardFloat { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-8px); } }
+    .research-card small { color: #8093aa; text-transform: uppercase; letter-spacing: .11em; }
+    .research-card h3 { font-family: 'Space Grotesk', sans-serif; margin: 8px 0 18px; }
+    .research-line { height: 1px; background: var(--line); margin: 18px 0; }
+    .metric { display: flex; justify-content: space-between; gap: 20px; padding: 8px 0; color: #b7c8dc; }
+    .metric strong { color: #eef8ff; }
 
-background:
-linear-gradient(120deg,#e0f2fe,#f8fafc);
-}
+    section.section { padding: 100px 0; position: relative; }
+    .section-kicker { color: var(--accent); font-size: .78rem; text-transform: uppercase; letter-spacing: .18em; font-weight: 700; }
+    .section-title { font-family: 'Space Grotesk', sans-serif; font-size: clamp(2rem, 4vw, 3.25rem); letter-spacing: -.04em; margin: 8px 0 16px; }
+    .section-subtitle { color: var(--muted); max-width: 760px; }
 
-/* animated blobs */
+    .glass {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 20px;
+      box-shadow: var(--shadow);
+      backdrop-filter: blur(12px);
+    }
 
-.hero::before{
-content:"";
-position:absolute;
-width:600px;
-height:600px;
-background:#38bdf8;
-opacity:0.15;
-border-radius:50%;
-top:-200px;
-left:-200px;
-filter:blur(100px);
-animation:float 10s infinite alternate;
-}
+    .about-copy { color: #bac9dc; font-size: 1.02rem; }
+    .research-pill {
+      display: inline-block;
+      padding: 9px 12px;
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,.03);
+      border-radius: 999px;
+      margin: 6px 5px 0 0;
+      font-size: .86rem;
+      color: #dbe8f7;
+    }
 
-.hero::after{
-content:"";
-position:absolute;
-width:500px;
-height:500px;
-background:#0ea5e9;
-opacity:0.12;
-border-radius:50%;
-bottom:-200px;
-right:-200px;
-filter:blur(100px);
-animation:float 12s infinite alternate;
-}
+    .skill-group { padding: 24px; height: 100%; }
+    .skill-group h4 { font-family: 'Space Grotesk'; font-size: 1.1rem; margin-bottom: 16px; }
+    .skill {
+      display: inline-block;
+      margin: 5px 5px 0 0;
+      padding: 7px 11px;
+      border-radius: 999px;
+      background: rgba(98,216,255,.07);
+      border: 1px solid rgba(98,216,255,.16);
+      color: #d6edff;
+      font-size: .82rem;
+    }
 
-@keyframes float{
+    .project-card {
+      height: 100%;
+      padding: 25px;
+      transition: .3s ease;
+      position: relative;
+      overflow: hidden;
+    }
+    .project-card::after {
+      content: '';
+      position: absolute;
+      inset: auto -25% -60% auto;
+      width: 180px;
+      height: 180px;
+      background: radial-gradient(circle, rgba(98,216,255,.12), transparent 65%);
+    }
+    .project-card:hover { transform: translateY(-7px); border-color: rgba(98,216,255,.24); }
+    .project-num { color: #7387a0; font-size: .76rem; letter-spacing: .14em; }
+    .project-title { font-family: 'Space Grotesk'; font-size: 1.28rem; margin: 8px 0 10px; }
+    .project-desc { color: var(--muted); font-size: .93rem; }
+    .project-tags { margin-top: 16px; }
+    .project-tags span { font-size: .75rem; color: #a9bbd0; margin-right: 7px; }
 
-0%{transform:translateY(0)}
-100%{transform:translateY(40px)}
+    .timeline { position: relative; margin-top: 26px; }
+    .timeline::before { content:''; position:absolute; left:9px; top:4px; bottom:4px; width:1px; background: var(--line); }
+    .timeline-item { position: relative; padding-left: 36px; margin-bottom: 28px; }
+    .timeline-item::before { content:''; position:absolute; left:4px; top:9px; width:11px; height:11px; border-radius:50%; background: var(--accent); box-shadow: 0 0 16px rgba(98,216,255,.35); }
+    .timeline-item h4 { font-family:'Space Grotesk'; margin-bottom:4px; }
+    .timeline-item small { color:#71869e; }
+    .timeline-item p { color:var(--muted); margin-top:7px; }
 
-}
+    .contact-panel { padding: 38px; text-align: center; }
+    footer { border-top: 1px solid var(--line); padding: 30px 0 40px; color: #70859d; font-size: .9rem; }
 
-.hero-content{
-max-width:850px;
-position:relative;
-z-index:2;
-}
+    .reveal { opacity: 0; transform: translateY(26px); transition: opacity .75s ease, transform .75s ease; }
+    .reveal.visible { opacity: 1; transform: none; }
 
-.hero h1{
-font-size:54px;
-font-weight:700;
-}
-
-.highlight{
-background:linear-gradient(90deg,#0ea5e9,#0284c7);
--webkit-background-clip:text;
-color:transparent;
-}
-
-.hero h4{
-color:#64748b;
-font-weight:500;
-margin-top:15px;
-}
-
-.hero p{
-margin-top:20px;
-font-size:18px;
-color:#475569;
-}
-
-/* BUTTON */
-
-.btn-main{
-background:#0ea5e9;
-border:none;
-color:white;
-padding:12px 26px;
-border-radius:8px;
-font-weight:600;
-transition:0.3s;
-}
-
-.btn-main:hover{
-background:#0284c7;
-transform:translateY(-3px);
-}
-
-/* SECTIONS */
-
-.section{
-padding:90px 0;
-}
-
-.section-title{
-text-align:center;
-font-size:36px;
-font-weight:700;
-margin-bottom:60px;
-color:#0ea5e9;
-}
-
-/* ABOUT */
-
-.about-list{
-max-width:800px;
-margin:auto;
-}
-
-.about-list li{
-margin-bottom:14px;
-color:#475569;
-}
-
-/* SKILLS */
-
-.skills-container{
-text-align:center;
-max-width:900px;
-margin:auto;
-}
-
-.skill{
-display:inline-block;
-padding:10px 18px;
-margin:8px;
-background:white;
-border-radius:30px;
-border:1px solid #e2e8f0;
-color:#0ea5e9;
-font-size:14px;
-transition:0.3s;
-}
-
-.skill:hover{
-background:#0ea5e9;
-color:white;
-transform:translateY(-3px);
-}
-
-/* PROJECT CARDS */
-
-.card-custom{
-background:white;
-border-radius:14px;
-padding:25px;
-border:1px solid #e2e8f0;
-transition:0.35s;
-height:100%;
-}
-
-.card-custom:hover{
-transform:translateY(-8px);
-box-shadow:0 15px 35px rgba(0,0,0,0.08);
-}
-
-.project-title{
-font-size:20px;
-font-weight:600;
-margin-bottom:10px;
-}
-
-.project-desc{
-font-size:14px;
-color:#64748b;
-}
-
-/* CONTACT */
-
-.contact-box{
-background:white;
-border-radius:14px;
-padding:45px;
-border:1px solid #e2e8f0;
-max-width:500px;
-margin:auto;
-text-align:center;
-}
-
-/* FOOTER */
-
-footer{
-text-align:center;
-padding:35px;
-color:#64748b;
-}
-
-/* MOBILE */
-
-@media(max-width:768px){
-
-.hero h1{
-font-size:34px;
-}
-
-.hero p{
-font-size:16px;
-padding:0 10px;
-}
-
-.section{
-padding:70px 0;
-}
-
-.section-title{
-font-size:28px;
-}
-
-}
-
-</style>
-
+    @media (max-width: 991px) {
+      .hero-grid { grid-template-columns: 1fr; }
+      .research-card { max-width: 620px; }
+    }
+    @media (max-width: 768px) {
+      .hero { padding-top: 110px; }
+      section.section { padding: 74px 0; }
+      .hero h1 { font-size: clamp(3rem, 14vw, 5rem); }
+      .hero-actions { gap: 10px; }
+      .contact-panel { padding: 26px 18px; }
+    }
+  </style>
 </head>
 
 <body>
-
-<!-- NAVBAR -->
-
-<nav class="navbar navbar-expand-lg fixed-top">
-
-<div class="container">
-
-<a class="navbar-brand">Umer Rafiq</a>
-
-<button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#nav">
-<span class="navbar-toggler-icon"></span>
-</button>
-
-<div class="collapse navbar-collapse" id="nav">
-
-<ul class="navbar-nav ms-auto">
-
-<li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-<li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
-<li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
-<li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
-
-</ul>
-
-</div>
-</div>
-
-</nav>
-
-<!-- HERO -->
-
-<section class="hero">
-
-<div class="container hero-content">
-
-<h1>
-Hi, I'm <span class="highlight">Umer Rafiq</span>
-</h1>
-
-<h4>
-AI Engineer • Machine Learning • Generative AI
-</h4>
-
-<p>
-
-Final-year <b>BTech Computer Science Engineering student</b> at the
-<b>University of Kashmir</b> with strong interest in Artificial Intelligence,
-Machine Learning, Deep Learning and Generative AI.
-
-I build intelligent systems including AI assistants, RAG pipelines,
-LLM powered applications and backend AI services.
-
-</p>
-
-<div class="mt-4">
-
-<a href="#projects" class="btn btn-main me-3" style="margin-bottom:4px">View Projects</a>
-
-<a href="resume.pdf" class="btn btn-outline-primary">Download Resume</a>
-
-</div>
-
-</div>
-
-</section>
-
-<!-- ABOUT -->
-
-<section class="section container" id="about">
-
-<h2 class="section-title">About Me</h2>
-
-<ul class="about-list">
-
-<li>Final year BTech Computer Science Engineering student at University of Kashmir.</li>
-
-<li>Hands-on experience building AI systems using Machine Learning, Deep Learning and Generative AI.</li>
-
-<li>Developed AI assistants, RAG pipelines and LLM agents using LangChain and LangGraph.</li>
-
-<li>Backend AI system development using FastAPI and FastMCP.</li>
-
-<li>Computer vision projects using OpenCV and MediaPipe.</li>
-
-<li>Strong programming skills in Python and C.</li>
-
-<li>Experience building web systems like Library Management and Hostel Management systems.</li>
-
-<li>Comfortable with Docker, SQL databases, REST APIs and AWS.</li>
-
-</ul>
-
-</section>
-
-<!-- SKILLS -->
-
-<section class="section container" id="skills">
-
-<h2 class="section-title">Technical Skills</h2>
-
-<div class="skills-container">
-
-<span class="skill">Python</span>
-<span class="skill">C Programming</span>
-<span class="skill">Machine Learning</span>
-<span class="skill">Deep Learning</span>
-<span class="skill">NLP</span>
-<span class="skill">Generative AI</span>
-<span class="skill">LangChain</span>
-<span class="skill">LangGraph</span>
-<span class="skill">FastAPI</span>
-<span class="skill">FastMCP</span>
-<span class="skill">SQL</span>
-<span class="skill">Docker</span>
-<span class="skill">AWS</span>
-<span class="skill">OpenCV</span>
-<span class="skill">MediaPipe</span>
-<span class="skill">HTML</span>
-<span class="skill">CSS</span>
-<span class="skill">JavaScript</span>
-<span class="skill">Git</span>
-<span class="skill">REST APIs</span>
-
-</div>
-
-</section>
-
-<!-- PROJECTS -->
-
-<section class="section container" id="projects">
-
-<h2 class="section-title">Projects</h2>
-
-<div class="row g-4">
-
-<!-- 1 -->
-<div class="col-md-6 col-lg-4">
-<div class="card-custom">
-<div class="project-title">MCP Client Frontend</div>
-<p class="project-desc">
-Streamlit based frontend connected with FastAPI backend for interacting with MCP AI tools.
-</p>
-<a href="https://github.com/umerrafiq04/MCP_CLIENT_-_FRONTEND" target="_blank">GitHub</a>
-</div>
-</div>
-
-<!-- 2 -->
-<div class="col-md-6 col-lg-4">
-<div class="card-custom">
-<div class="project-title">MCP Server</div>
-<p class="project-desc">
-Backend MCP server implementing AI tools and APIs used by intelligent agents.
-</p>
-<a href="https://github.com/umerrafiq04/MCP_SERVER" target="_blank">GitHub</a>
-</div>
-</div>
-
-<!-- 3 -->
-<div class="col-md-6 col-lg-4">
-<div class="card-custom">
-<div class="project-title">Corrective RAG</div>
-<p class="project-desc">
-Advanced Retrieval Augmented Generation system using LangGraph with corrective reasoning.
-</p>
-<a href="https://github.com/umerrafiq04/CORRECTIVE_RAG" target="_blank">GitHub</a>
-</div>
-</div>
-
-<!-- 4 -->
-<div class="col-md-6 col-lg-4">
-<div class="card-custom">
-<div class="project-title">AI Blog Generator</div>
-<p class="project-desc">
-AI system that automatically generates blog posts and relevant images using LLMs.
-</p>
-<a href="https://github.com/umerrafiq04/blog" target="_blank">GitHub</a>
-</div>
-</div>
-
-<!-- 5 -->
-<div class="col-md-6 col-lg-4">
-<div class="card-custom">
-<div class="project-title">AI Job Application Assistant</div>
-<p class="project-desc">
-AI powered job search and automated application assistant.
-</p>
-<a href="https://github.com/umerrafiq04/AI-Job-Application-Assistantt" target="_blank">GitHub</a>
-</div>
-</div>
-
-<!-- 6 -->
-<div class="col-md-6 col-lg-4">
-<div class="card-custom">
-<div class="project-title">AI Conversational Chatbot</div>
-<p class="project-desc">
-Conversational chatbot using LangGraph and Mistral with reasoning capabilities.
-</p>
-<a href="https://github.com/umerrafiq04/AI-Conversational-Chatbot-with-LangGraph-Mistral" target="_blank">GitHub</a>
-</div>
-</div>
-
-<!-- 7 -->
-<div class="col-md-6 col-lg-4">
-<div class="card-custom">
-<div class="project-title">CNN Face Mask Detection</div>
-<p class="project-desc">
-Deep learning project detecting face masks using CNN models and MobileNetV2.
-</p>
-<a href="https://github.com/umerrafiq04/CNN" target="_blank">GitHub</a>
-</div>
-</div>
-
-</div>
-
-</section>
-
-<!-- CONTACT -->
-
-<section class="section container" id="contact">
-
-<h2 class="section-title">Contact</h2>
-
-<div class="contact-box">
-
-<p><b>Email</b></p>
-<p>rafiqyatooumer@gmail.com</p>
-
-<p class="mt-3">
-
-<a href="https://github.com/umerrafiq04">GitHub</a> |
-<a href="https://www.linkedin.com/in/umer-rafiq-6410312a5">LinkedIn</a> |
-<a href="https://www.instagram.com/ummer.04">Instagram</a>
-
-</p>
-
-</div>
-
-</section>
-
-<footer>
-
-© 2026 Umer Rafiq • AI Engineer Portfolio
-
-</footer>
-
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-
+  <nav class="navbar navbar-expand-lg fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="#top">Umer Rafiq</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="nav">
+        <ul class="navbar-nav ms-auto gap-lg-2">
+          <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="#research">Research</a></li>
+          <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+          <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main id="top">
+    <section class="hero">
+      <span class="orb one"></span><span class="orb two"></span><span class="orb three"></span>
+      <div class="container">
+        <div class="hero-grid">
+          <div>
+            <span class="eyebrow"><span class="dot"></span> AI / ML Engineer • Research-Oriented Builder</span>
+            <h1>Engineering <span class="gradient-text">intelligent systems</span> at the intersection of AI and real-world problems.</h1>
+            <p class="hero-lead">
+              I'm Umer Rafiq, a <strong>B.Tech Computer Science & Engineering graduate</strong> from the University of Kashmir.
+              I work across Machine Learning, Generative AI, Agentic AI, RAG, MCP, backend engineering, and intelligent automation — with a strong interest in research-driven AI systems.
+            </p>
+            <div class="hero-actions">
+              <a href="#projects" class="btn btn-main">Explore Research & Projects</a>
+              <a href="https://drive.google.com/file/d/1PP9eSLAwM7gZqpwdbWBBq1lD9gpkBHV-/view?usp=drive_link" target="_blank" rel="noopener" class="btn btn-ghost">View Resume</a>
+              <a href="https://github.com/umerrafiq04" target="_blank" rel="noopener" class="btn btn-ghost">GitHub</a>
+            </div>
+          </div>
+
+          <aside class="research-card">
+            <small>Profile focus</small>
+            <h3>Research + Engineering</h3>
+            <p style="color:#a9bacf; margin-bottom:0;">Building practical AI systems while exploring methods that improve reasoning, retrieval, automation, and spatio-temporal learning.</p>
+            <div class="research-line"></div>
+            <div class="metric"><span>Core domain</span><strong>Artificial Intelligence</strong></div>
+            <div class="metric"><span>Specialization</span><strong>LLM Systems & ML</strong></div>
+            <div class="metric"><span>Engineering</span><strong>Python / FastAPI</strong></div>
+            <div class="metric"><span>Research</span><strong>RAG • Agents • Climate ML</strong></div>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <section class="section reveal" id="about">
+      <div class="container">
+        <span class="section-kicker">About</span>
+        <h2 class="section-title">From coursework to research-oriented AI engineering.</h2>
+        <p class="section-subtitle">My work combines strong computer science fundamentals with hands-on experimentation in modern AI systems.</p>
+        <div class="row g-4 mt-4">
+          <div class="col-lg-7">
+            <div class="glass p-4 p-lg-5 h-100">
+              <p class="about-copy mb-3">
+                I recently graduated with a B.Tech in Computer Science & Engineering from the University of Kashmir. My interests span machine learning, deep learning, NLP, generative AI, agentic workflows, retrieval systems, and backend infrastructure.
+              </p>
+              <p class="about-copy mb-0">
+                I enjoy taking ideas from research concepts to working systems — designing APIs, integrating models and tools, evaluating model behavior, and building applications that solve meaningful problems.
+              </p>
+            </div>
+          </div>
+          <div class="col-lg-5">
+            <div class="glass p-4 h-100">
+              <div class="section-kicker mb-2">Research interests</div>
+              <span class="research-pill">Agentic AI</span>
+              <span class="research-pill">RAG & Retrieval</span>
+              <span class="research-pill">MCP Systems</span>
+              <span class="research-pill">LLM Applications</span>
+              <span class="research-pill">Time-Series Forecasting</span>
+              <span class="research-pill">Spatio-Temporal ML</span>
+              <span class="research-pill">NLP</span>
+              <span class="research-pill">Intelligent Automation</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section reveal" id="research">
+      <div class="container">
+        <span class="section-kicker">Research direction</span>
+        <h2 class="section-title">Questions I like working on.</h2>
+        <p class="section-subtitle">I’m particularly interested in how AI systems can become more capable, grounded, observable, and useful in real environments.</p>
+        <div class="row g-4 mt-4">
+          <div class="col-md-4"><div class="glass p-4 h-100"><div class="section-kicker">01</div><h4 class="mt-2">Reliable retrieval</h4><p class="about-copy mb-0">Improving RAG quality through corrective retrieval, self-evaluation, and better context selection.</p></div></div>
+          <div class="col-md-4"><div class="glass p-4 h-100"><div class="section-kicker">02</div><h4 class="mt-2">Tool-using agents</h4><p class="about-copy mb-0">Designing agentic systems that can reason over tools, APIs, data, and multi-step workflows.</p></div></div>
+          <div class="col-md-4"><div class="glass p-4 h-100"><div class="section-kicker">03</div><h4 class="mt-2">Spatio-temporal learning</h4><p class="about-copy mb-0">Exploring graph-based models and time-series methods for complex environmental forecasting problems.</p></div></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section reveal" id="skills">
+      <div class="container">
+        <span class="section-kicker">Technical stack</span>
+        <h2 class="section-title">Tools I use to turn ideas into systems.</h2>
+        <div class="row g-4 mt-4">
+          <div class="col-lg-4"><div class="glass skill-group"><h4>AI / ML</h4><span class="skill">Machine Learning</span><span class="skill">Deep Learning</span><span class="skill">NLP</span><span class="skill">Generative AI</span><span class="skill">Agentic AI</span><span class="skill">Transformers</span><span class="skill">Computer Vision</span><span class="skill">Time Series</span></div></div>
+          <div class="col-lg-4"><div class="glass skill-group"><h4>AI Engineering</h4><span class="skill">LangChain</span><span class="skill">LangGraph</span><span class="skill">MCP</span><span class="skill">RAG</span><span class="skill">FAISS</span><span class="skill">Chroma</span><span class="skill">Hugging Face</span><span class="skill">n8n</span></div></div>
+          <div class="col-lg-4"><div class="glass skill-group"><h4>Backend & Data</h4><span class="skill">Python</span><span class="skill">SQL</span><span class="skill">FastAPI</span><span class="skill">REST APIs</span><span class="skill">NoSQL</span><span class="skill">Docker</span><span class="skill">AWS</span><span class="skill">Git</span></div></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section reveal" id="projects">
+      <div class="container">
+        <span class="section-kicker">Selected work</span>
+        <h2 class="section-title">Research-inspired projects & systems.</h2>
+        <p class="section-subtitle">A selection of projects spanning intelligent agents, retrieval systems, backend AI infrastructure, and machine learning research.</p>
+
+        <div class="row g-4 mt-4">
+          <div class="col-md-6 col-lg-4"><article class="glass project-card"><div class="project-num">01 — AI SYSTEMS</div><h3 class="project-title">MCP Multi-Server AI Platform</h3><p class="project-desc">Multi-server AI architecture connecting LLMs to external tools and services through Model Context Protocol.</p><div class="project-tags"><span>MCP</span><span>FastAPI</span><span>LangGraph</span></div><a href="https://github.com/umerrafiq04/MCP_CLIENT" target="_blank" rel="noopener">View repository →</a></article></div>
+          <div class="col-md-6 col-lg-4"><article class="glass project-card"><div class="project-num">02 — RETRIEVAL</div><h3 class="project-title">Corrective RAG</h3><p class="project-desc">Retrieval-augmented generation workflow that evaluates and improves retrieved evidence before answering.</p><div class="project-tags"><span>RAG</span><span>LangGraph</span><span>LLMs</span></div><a href="https://github.com/umerrafiq04/CORRECTIVE_RAG" target="_blank" rel="noopener">View repository →</a></article></div>
+          <div class="col-md-6 col-lg-4"><article class="glass project-card"><div class="project-num">03 — RETRIEVAL</div><h3 class="project-title">Self-RAG</h3><p class="project-desc">Exploration of self-evaluating retrieval and generation loops for more dependable LLM responses.</p><div class="project-tags"><span>Self-RAG</span><span>RAG</span><span>NLP</span></div><a href="https://github.com/umerrafiq04/SELF_RAG" target="_blank" rel="noopener">View repository →</a></article></div>
+          <div class="col-md-6 col-lg-4"><article class="glass project-card"><div class="project-num">04 — ML RESEARCH</div><h3 class="project-title">Spatio-Temporal Climate Forecasting</h3><p class="project-desc">Graph-based deep learning for forecasting climate variables across spatially connected nodes.</p><div class="project-tags"><span>GNN</span><span>GRU</span><span>Time Series</span></div><a href="https://github.com/umerrafiq04/spatio-temporal-climate-gnn-lstm" target="_blank" rel="noopener">View repository →</a></article></div>
+          <div class="col-md-6 col-lg-4"><article class="glass project-card"><div class="project-num">05 — AI APPLICATIONS</div><h3 class="project-title">AI Job Application Assistant</h3><p class="project-desc">AI-assisted workflow for streamlining job-search and application tasks with intelligent automation.</p><div class="project-tags"><span>AI Agents</span><span>Automation</span><span>Python</span></div><a href="https://github.com/umerrafiq04/AI-Job-Application-Assistantt" target="_blank" rel="noopener">View repository →</a></article></div>
+          <div class="col-md-6 col-lg-4"><article class="glass project-card"><div class="project-num">06 — BACKEND AI</div><h3 class="project-title">AI Conversational Chatbot</h3><p class="project-desc">Conversational system built around LangGraph and Mistral for structured multi-step interaction.</p><div class="project-tags"><span>LangGraph</span><span>Mistral</span><span>Python</span></div><a href="https://github.com/umerrafiq04/AI-Conversational-Chatbot-with-LangGraph-Mistral" target="_blank" rel="noopener">View repository →</a></article></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section reveal">
+      <div class="container">
+        <span class="section-kicker">Experience</span>
+        <h2 class="section-title">Selected professional exposure.</h2>
+        <div class="glass p-4 p-lg-5">
+          <div class="timeline">
+            <div class="timeline-item">
+              <h4>AI Automation Intern — BrandSparc</h4>
+              <small>April 2026 – May 2026</small>
+              <p>Built AI-powered workflow automation using n8n, APIs, webhooks, JavaScript, and Google Sheets, including an automated YouTube video-to-shorts pipeline.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section reveal" id="contact">
+      <div class="container">
+        <div class="glass contact-panel">
+          <span class="section-kicker">Let’s connect</span>
+          <h2 class="section-title mt-2">Open to research, AI engineering, and meaningful collaborations.</h2>
+          <p class="section-subtitle mx-auto">I’m interested in opportunities where strong engineering meets experimentation, research, and real-world AI applications.</p>
+          <div class="hero-actions justify-content-center mt-4">
+            <a href="https://drive.google.com/file/d/1PP9eSLAwM7gZqpwdbWBBq1lD9gpkBHV-/view?usp=drive_link" target="_blank" rel="noopener" class="btn btn-main">View Resume</a>
+            <a href="mailto:rafiqyatooumer@gmail.com" class="btn btn-ghost">Email Me</a>
+            <a href="https://www.linkedin.com/in/umer-rafiq-6410312a5" target="_blank" rel="noopener" class="btn btn-ghost">LinkedIn</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container d-flex flex-column flex-md-row justify-content-between gap-2">
+      <span>© 2026 Umer Rafiq</span>
+      <span>AI / ML Engineer • Research-Oriented Builder</span>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) entry.target.classList.add('visible');
+      });
+    }, { threshold: 0.12 });
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+  </script>
 </body>
-
 </html>
