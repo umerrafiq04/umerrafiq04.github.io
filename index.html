@@ -1,26 +1,1645 @@
 <!doctype html>
 <html lang="en">
 <head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="description" content="Umer Rafiq — AI/ML Engineer building intelligent applications, LLM systems, machine learning solutions and automation.">
-<title>Umer Rafiq | AI/ML Engineer</title>
-<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Umer Rafiq — AI Engineer | LLM, Agentic AI &amp; Machine Learning Systems</title>
+<meta name="description" content="Umer Rafiq — AI Engineer building generative AI, LLM, agentic and machine learning systems with Python, FastAPI, LangGraph, LangChain, MCP and RAG.">
+<meta name="author" content="Umer Rafiq">
+<meta name="keywords" content="AI Engineer, Generative AI, LLM Engineer, Machine Learning Engineer, LangGraph, LangChain, MCP, RAG, FastAPI, Python, AI Agents">
+<link rel="canonical" href="https://github.com/umerrafiq04">
+<meta property="og:type" content="profile">
+<meta property="og:title" content="Umer Rafiq — AI Engineer">
+<meta property="og:description" content="Building generative AI, LLM, agentic and machine learning systems — Python, FastAPI, LangGraph, MCP, RAG.">
+<meta property="og:url" content="https://github.com/umerrafiq04">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Umer Rafiq — AI Engineer">
+<meta name="twitter:description" content="Building generative AI, LLM, agentic and machine learning systems — Python, FastAPI, LangGraph, MCP, RAG.">
+<meta name="theme-color" content="#07111f">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
 <style>
-:root{--bg:#07111f;--panel:rgba(15,29,48,.72);--line:rgba(148,163,184,.16);--text:#edf4ff;--muted:#9fb0c5;--a:#62d8ff;--g:#51f4b5;--shadow:0 24px 70px #00000047}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:radial-gradient(circle at 15% 10%,#62d8ff14,transparent 28%),radial-gradient(circle at 85% 18%,#8b7cff14,transparent 30%),var(--bg);color:var(--text);font-family:Inter,sans-serif;line-height:1.7;overflow-x:hidden}body:before{content:'';position:fixed;inset:0;pointer-events:none;opacity:.06;background-image:linear-gradient(#fff1 1px,transparent 1px),linear-gradient(90deg,#fff1 1px,transparent 1px);background-size:48px 48px}a{color:var(--a);text-decoration:none}a:hover{color:#c5f3ff}.navbar{background:#07111fba;backdrop-filter:blur(16px);border-bottom:1px solid var(--line)}.navbar-brand{font:700 1.15rem 'Space Grotesk';color:var(--text)!important}.nav-link{color:#c6d4e6!important}.hero{min-height:100vh;display:grid;align-items:center;position:relative;overflow:hidden;padding:125px 0 80px}.orb{position:absolute;border-radius:50%;filter:blur(8px);animation:drift 12s ease-in-out infinite alternate}.o1{width:320px;height:320px;background:#1ac7ff;left:-100px;top:12%;opacity:.35;box-shadow:0 0 100px #1ac7ff55}.o2{width:260px;height:260px;background:#7568ff;right:-70px;top:25%;opacity:.35;animation-delay:-4s}.o3{width:180px;height:180px;background:#36efb0;left:52%;bottom:3%;opacity:.12;animation-delay:-7s}@keyframes drift{to{transform:translate(35px,-28px) scale(1.12)}}.hero-grid{display:grid;grid-template-columns:1.25fr .75fr;gap:55px;align-items:center;position:relative;z-index:2}.eyebrow{display:inline-flex;gap:10px;align-items:center;padding:8px 13px;border:1px solid var(--line);border-radius:99px;background:#ffffff08;color:#cbd8ea;font-size:.82rem}.dot{width:8px;height:8px;background:var(--g);border-radius:50%;box-shadow:0 0 14px var(--g)}h1,.section-title,h2,h3,h4{font-family:'Space Grotesk',sans-serif}.hero h1{font-size:clamp(3.3rem,7vw,6.2rem);line-height:.98;letter-spacing:-.05em;margin:24px 0}.gradient{background:linear-gradient(100deg,#9beaff,#62d8ff 35%,#a59cff 70%,#65f0bc);-webkit-background-clip:text;background-clip:text;color:transparent}.lead{color:#b6c6d9;max-width:760px;font-size:1.08rem}.actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}.btnx{padding:12px 18px;border-radius:12px;font-weight:600;border:1px solid var(--line);transition:.25s}.primary{background:linear-gradient(135deg,#8fe7ff,#67d6ff);color:#06111c;border:0}.btnx:hover{transform:translateY(-2px)}.glass{background:var(--panel);border:1px solid var(--line);border-radius:20px;box-shadow:var(--shadow);backdrop-filter:blur(12px)}.profile{padding:28px;animation:float 7s ease-in-out infinite}.profile small,.kicker{color:var(--a);text-transform:uppercase;letter-spacing:.16em;font-size:.75rem;font-weight:700}.profile-line{height:1px;background:var(--line);margin:18px 0}.metric{display:flex;justify-content:space-between;padding:7px 0;color:#b7c8dc}.metric strong{color:#eef8ff}@keyframes float{50%{transform:translateY(-8px)}}section{padding:95px 0}.section-title{font-size:clamp(2rem,4vw,3.2rem);letter-spacing:-.04em;margin:7px 0 14px}.sub{color:var(--muted);max-width:780px}.about{color:#bac9dc}.pill{display:inline-block;padding:7px 11px;margin:5px 4px 0 0;border-radius:99px;background:#62d8ff12;border:1px solid #62d8ff29;color:#d6edff;font-size:.82rem}.skillbox{padding:24px;height:100%}.skillbox h4{font-size:1.1rem;margin-bottom:14px}.project{height:100%;padding:25px;transition:.3s}.project:hover{transform:translateY(-7px);border-color:#62d8ff55}.num{color:#7387a0;font-size:.75rem;letter-spacing:.14em}.project h3{font-size:1.25rem;margin:8px 0}.project p{color:var(--muted);font-size:.92rem}.tags{color:#9fb0c5;font-size:.76rem;margin:14px 0}.timeline{position:relative;padding-left:28px}.timeline:before{content:'';position:absolute;left:7px;top:5px;bottom:5px;width:1px;background:var(--line)}.item{position:relative;margin-bottom:34px}.item:before{content:'';position:absolute;left:-25px;top:8px;width:10px;height:10px;border-radius:50%;background:var(--a);box-shadow:0 0 14px #62d8ff77}.item h4{margin-bottom:3px}.item small{color:#71869e}.item p{color:var(--muted);margin:7px 0}.course{padding:25px;height:100%}.course h4{font-size:1.05rem}.course p{color:var(--muted);margin:0}.contact{text-align:center;padding:40px}footer{border-top:1px solid var(--line);padding:28px 0;color:#70859d}.reveal{opacity:0;transform:translateY(24px);transition:.7s}.reveal.show{opacity:1;transform:none}@media(max-width:900px){.hero-grid{grid-template-columns:1fr}.profile{max-width:620px}}@media(max-width:700px){section{padding:70px 0}.hero{padding-top:110px}}
-</style></head>
+:root{
+  --bg:#07111f;
+  --panel:rgba(15,29,48,.72);
+  --panel-2:rgba(15,29,48,.5);
+  --line:rgba(148,163,184,.16);
+  --line-strong:rgba(148,163,184,.3);
+  --text:#edf4ff;
+  --muted:#a7b8cc;
+  --dim:#8296ad;
+  --a:#62d8ff;
+  --g:#51f4b5;
+  --v:#a59cff;
+  --shadow:0 24px 70px rgba(0,0,0,.28);
+  --radius:18px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:84px}
+body{
+  margin:0;background:
+    radial-gradient(circle at 15% 8%,rgba(98,216,255,.09),transparent 30%),
+    radial-gradient(circle at 88% 16%,rgba(139,124,255,.09),transparent 32%),
+    var(--bg);
+  color:var(--text);font-family:Inter,system-ui,sans-serif;line-height:1.68;
+  overflow-x:hidden;-webkit-font-smoothing:antialiased;
+}
+body::before{
+  content:'';position:fixed;inset:0;pointer-events:none;opacity:.05;z-index:1;
+  background-image:linear-gradient(rgba(255,255,255,.08) 1px,transparent 1px),
+                   linear-gradient(90deg,rgba(255,255,255,.08) 1px,transparent 1px);
+  background-size:48px 48px;
+}
+body.locked{overflow:hidden}
+main,nav,footer{position:relative;z-index:2}
+/* Interstellar-style background — behind everything, never receives pointer events.
+   'screen' blending means the black of space adds nothing, so the page's own
+   gradient still shows through and only the light composites on top. */
+#space-canvas{
+  position:fixed;inset:0;width:100%;height:100%;display:block;
+  z-index:0;pointer-events:none;opacity:0;mix-blend-mode:screen;
+  transition:opacity 1.6s ease .2s;
+}
+#space-canvas.lit{opacity:.82}
+
+/* scroll progress */
+#progress{
+  position:fixed;top:0;left:0;height:2px;width:0;z-index:1200;pointer-events:none;
+  background:linear-gradient(90deg,#62d8ff,#a59cff 55%,#ffb066);
+  box-shadow:0 0 12px rgba(98,216,255,.55);
+}
+
+/* cards tilt toward the cursor */
+.pcard,.feat{perspective:1100px}
+.pcard-inner{transform-style:preserve-3d;will-change:transform}
+h1,h2,h3,h4,.brand{font-family:'Space Grotesk',Inter,sans-serif;letter-spacing:-.02em}
+a{color:var(--a);text-decoration:none}
+a:hover{color:#c5f3ff}
+:focus-visible{outline:2px solid var(--a);outline-offset:3px;border-radius:6px}
+code{color:#cfe9ff;background:rgba(98,216,255,.08);padding:1px 5px;border-radius:5px;font-size:.9em}
+
+.skip{position:absolute;left:-9999px;top:0;background:var(--a);color:#06111c;padding:10px 16px;border-radius:0 0 10px 0;font-weight:600;z-index:2000}
+.skip:focus{left:0}
+
+/* ---------- nav ---------- */
+.navbar{background:rgba(7,17,31,.82);backdrop-filter:blur(16px);border-bottom:1px solid var(--line)}
+.navbar-brand.brand{font-weight:700;font-size:1.12rem;color:var(--text)!important}
+.navbar .nav-link{color:#c6d4e6!important;font-size:.94rem;padding:.4rem .75rem!important;border-radius:8px}
+.navbar .nav-link:hover,.navbar .nav-link:focus{color:#fff!important;background:rgba(255,255,255,.05)}
+.navbar-toggler{border-color:var(--line)}
+.navbar-toggler:focus{box-shadow:0 0 0 3px rgba(98,216,255,.35)}
+
+/* ---------- shared ---------- */
+.glass{background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow);backdrop-filter:blur(12px)}
+section{padding:92px 0}
+.section-head{max-width:820px}
+.kicker{color:var(--a);font-size:.8rem;font-weight:600;letter-spacing:.05em;margin-bottom:2px}
+.section-title{font-size:clamp(1.9rem,3.6vw,2.9rem);margin:6px 0 12px}
+.sub{color:var(--muted);max-width:760px;margin:0}
+.pill{display:inline-block;padding:6px 11px;margin:5px 5px 0 0;border-radius:99px;
+  background:rgba(98,216,255,.08);border:1px solid rgba(98,216,255,.2);color:#d6edff;font-size:.8rem;
+  transition:background .2s,border-color .2s,transform .2s}
+.pill:hover{background:rgba(98,216,255,.16);border-color:rgba(98,216,255,.42);transform:translateY(-1px)}
+.btnx{display:inline-flex;align-items:center;gap:8px;padding:10px 17px;border-radius:12px;font-weight:600;
+  font-size:.92rem;border:1px solid var(--line-strong);color:var(--text);background:rgba(255,255,255,.03);
+  transition:.22s;font-family:inherit;cursor:pointer}
+.btnx:hover{color:#fff;border-color:rgba(98,216,255,.5);background:rgba(98,216,255,.08)}
+.btnx.primary{background:linear-gradient(135deg,#8fe7ff,#67d6ff);color:#06111c;border:0}
+.btnx.primary:hover{color:#06111c;filter:brightness(1.06)}
+.btnx.sm{padding:8px 14px;font-size:.87rem;border-radius:10px}
+.actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:26px}
+.card-actions{display:flex;flex-wrap:wrap;gap:9px;margin-top:auto;padding-top:16px}
+
+/* ---------- hero ---------- */
+.hero{min-height:100vh;display:grid;align-items:center;position:relative;overflow:hidden;padding:130px 0 80px}
+.orb{position:absolute;border-radius:50%;filter:blur(10px);animation:drift 14s ease-in-out infinite alternate}
+.o1{width:320px;height:320px;background:#1ac7ff;left:-110px;top:14%;opacity:.28}
+.o2{width:250px;height:250px;background:#7568ff;right:-80px;top:26%;opacity:.28;animation-delay:-5s}
+.o3{width:180px;height:180px;background:#36efb0;left:54%;bottom:4%;opacity:.1;animation-delay:-8s}
+@keyframes drift{to{transform:translate(34px,-26px) scale(1.1)}}
+.hero-grid{display:grid;grid-template-columns:1.3fr .7fr;gap:52px;align-items:center;position:relative;z-index:2}
+.status{display:inline-flex;gap:10px;align-items:center;padding:7px 14px;border:1px solid var(--line);
+  border-radius:99px;background:rgba(255,255,255,.04);color:#cbd8ea;font-size:.83rem}
+.dot{width:8px;height:8px;background:var(--g);border-radius:50%;box-shadow:0 0 12px var(--g)}
+.hero h1{font-size:clamp(2.6rem,5.6vw,4.4rem);line-height:1.03;letter-spacing:-.04em;margin:22px 0 18px;font-weight:700}
+.hero .lead{color:#bbcbde;max-width:63ch;font-size:1.06rem}
+.hero .lead strong{color:#e6f2ff;font-weight:600}
+.spec{padding:26px}
+.spec h3{font-size:1.15rem;margin:2px 0 10px}
+.spec p{color:#b3c4d8;font-size:.94rem}
+.spec-line{height:1px;background:var(--line);margin:16px 0}
+.metric{display:flex;justify-content:space-between;gap:14px;padding:6px 0;color:#a9bbd0;font-size:.9rem}
+.metric strong{color:#eef8ff;font-weight:600;text-align:right}
+
+/* ---------- project cards ---------- */
+.pcard-inner{height:100%;padding:26px;display:flex;flex-direction:column;
+  transition:transform .25s ease,border-color .25s ease,box-shadow .25s ease}
+.pcard-inner:hover{transform:translateY(-5px);border-color:rgba(98,216,255,.38)}
+.feat .pcard-inner{border-top:2px solid rgba(98,216,255,.55);padding:28px}
+.feat .pcard-inner:hover{box-shadow:0 26px 70px rgba(0,0,0,.34),0 0 0 1px rgba(98,216,255,.16)}
+.meta{display:flex;align-items:center;gap:10px;margin-bottom:10px}
+.rank{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:.95rem;color:#06111c;
+  background:linear-gradient(135deg,#8fe7ff,#67d6ff);border-radius:8px;padding:2px 9px;line-height:1.5}
+.cat{color:var(--dim);font-size:.79rem;font-weight:600}
+.feat h3{font-size:1.3rem;margin:0 0 10px}
+.pcard-inner h3{font-size:1.1rem;margin:0 0 9px}
+.pcard-inner p.blurb{color:var(--muted);font-size:.94rem;margin:0 0 14px}
+.techline{margin-bottom:2px}
+
+/* ---------- filters ---------- */
+.filters{display:flex;flex-wrap:wrap;gap:9px;margin:26px 0 6px}
+.chip{padding:8px 15px;border-radius:99px;border:1px solid var(--line);background:rgba(255,255,255,.03);
+  color:#c2d2e4;font-size:.86rem;font-weight:500;cursor:pointer;transition:.2s;font-family:inherit}
+.chip:hover{border-color:rgba(98,216,255,.42);color:#fff}
+.chip[aria-pressed="true"]{background:rgba(98,216,255,.14);border-color:rgba(98,216,255,.5);color:#dff4ff}
+.is-hidden{display:none!important}
+
+/* ---------- case study dialog ---------- */
+#case{
+  width:min(940px,calc(100vw - 32px));max-width:940px;max-height:88vh;padding:0;border:1px solid var(--line-strong);
+  border-radius:20px;background:#0a1626;color:var(--text);overflow:hidden;box-shadow:0 40px 110px rgba(0,0,0,.6);
+}
+#case::backdrop{background:rgba(3,9,18,.76);backdrop-filter:blur(6px)}
+#case[open]{animation:pop .22s ease-out}
+@keyframes pop{from{opacity:0;transform:translateY(14px) scale(.985)}to{opacity:1;transform:none}}
+.case-shell{display:flex;flex-direction:column;max-height:88vh}
+.case-head{position:sticky;top:0;z-index:3;display:flex;align-items:flex-start;gap:16px;
+  padding:22px 26px 18px;border-bottom:1px solid var(--line);background:rgba(10,22,38,.97);backdrop-filter:blur(10px)}
+.case-head .cat{display:block;margin-bottom:4px}
+.case-head h2{font-size:clamp(1.25rem,2.6vw,1.7rem);margin:0}
+.case-close{flex-shrink:0;margin-left:auto;width:38px;height:38px;border-radius:10px;border:1px solid var(--line-strong);
+  background:rgba(255,255,255,.04);color:var(--text);font-size:1.25rem;line-height:1;cursor:pointer;transition:.2s}
+.case-close:hover{background:rgba(98,216,255,.12);border-color:rgba(98,216,255,.5)}
+.case-body{padding:24px 26px 30px;overflow-y:auto;overscroll-behavior:contain}
+.case-body h3{font-size:1.02rem;color:#e3eefb;margin:26px 0 8px}
+.case-body h3:first-child{margin-top:0}
+.case-body p{color:#b6c6da;font-size:.95rem;margin:0 0 12px;max-width:74ch}
+.case-body ul{padding-left:18px;margin:0 0 14px;color:#b6c6da;font-size:.95rem;max-width:74ch}
+.case-body li{margin-bottom:7px}
+.case-body strong{color:#dcebfa;font-weight:600}
+.case-links{display:flex;flex-wrap:wrap;gap:11px;margin-top:26px;padding-top:20px;border-top:1px solid var(--line)}
+.mods{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:12px;margin:4px 0 14px}
+.mod{border:1px solid var(--line);border-radius:12px;padding:14px 15px;background:rgba(255,255,255,.02)}
+.mod b{display:block;color:#e3eefb;font-size:.92rem;font-family:'Space Grotesk',sans-serif;margin-bottom:4px}
+.mod span{font-size:.87rem;color:var(--muted)}
+
+/* ---------- diagrams ---------- */
+.arch{margin:6px 0 16px;border:1px solid var(--line);border-radius:14px;padding:20px 16px;background:rgba(255,255,255,.02)}
+.arch-layer{display:flex;flex-wrap:wrap;justify-content:center;gap:10px}
+.node{border:1px solid rgba(98,216,255,.28);background:rgba(98,216,255,.07);color:#dbf1ff;
+  border-radius:10px;padding:9px 14px;font-size:.84rem;font-weight:500;text-align:center}
+.node.edge{border-color:rgba(165,156,255,.32);background:rgba(165,156,255,.08);color:#e0dcff}
+.node.core{border-color:rgba(81,244,181,.36);background:rgba(81,244,181,.09);color:#d7fdf0;font-weight:600}
+.arrow{display:block;text-align:center;color:var(--dim);font-size:1.05rem;line-height:1;margin:9px 0}
+.arch-note{color:var(--dim);font-size:.83rem;text-align:center;margin:14px 0 0!important}
+.flow{display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin:6px 0 16px;
+  border:1px solid var(--line);border-radius:14px;padding:18px 16px;background:rgba(255,255,255,.02)}
+.flow .node{font-size:.8rem;padding:7px 11px}
+.flow .sep{color:var(--dim);font-size:.9rem}
+
+/* ---------- timeline ---------- */
+.timeline{position:relative;padding-left:28px}
+.timeline::before{content:'';position:absolute;left:6px;top:8px;bottom:8px;width:1px;background:var(--line)}
+.item{position:relative;margin-bottom:34px}
+.item:last-child{margin-bottom:0}
+.item::before{content:'';position:absolute;left:-26px;top:9px;width:11px;height:11px;border-radius:50%;
+  background:var(--bg);border:2px solid var(--a)}
+.item.now::before{background:var(--a);box-shadow:0 0 14px rgba(98,216,255,.55)}
+.item h4{font-size:1.1rem;margin-bottom:2px}
+.item .when{color:var(--dim);font-size:.86rem;margin:0}
+.item ul{list-style:none;padding:0;margin:12px 0 0}
+.item ul li{position:relative;padding-left:18px;color:var(--muted);font-size:.93rem;margin-bottom:8px}
+.item ul li::before{content:'';position:absolute;left:0;top:.68em;width:6px;height:6px;border-radius:50%;background:var(--a);opacity:.6}
+
+.course{padding:24px;height:100%}
+.course h4{font-size:1.02rem;margin-bottom:4px}
+.course p{color:var(--muted);margin:0;font-size:.9rem}
+.contact{text-align:center;padding:44px 28px}
+.contact .actions{justify-content:center}
+footer{border-top:1px solid var(--line);padding:26px 0;color:var(--dim);font-size:.9rem}
+
+/* ---------- motion ---------- */
+.reveal{opacity:0;transform:translateY(20px);transition:opacity .6s ease,transform .6s ease}
+.reveal.show{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}
+  .reveal{opacity:1;transform:none}
+}
+
+/* ---------- responsive ---------- */
+@media(max-width:991px){
+  .hero-grid{grid-template-columns:1fr;gap:36px}
+  .spec{max-width:640px}
+}
+@media(max-width:700px){
+  section{padding:66px 0}
+  .hero{padding-top:112px;min-height:auto}
+  .orb{filter:blur(28px)}
+  .o1{width:220px;height:220px}
+  .o2{width:180px;height:180px}
+  .btnx{padding:10px 14px;font-size:.88rem}
+  .metric{font-size:.86rem}
+  #case{width:100vw;max-width:100vw;max-height:100vh;height:100vh;border-radius:0;border:0}
+  .case-shell{max-height:100vh;height:100vh}
+  .case-head{padding:18px 18px 15px}
+  .case-body{padding:20px 18px 34px}
+  .case-links .btnx{flex:1 1 auto;justify-content:center}
+}
+</style>
+</head>
+
 <body>
-<nav class="navbar navbar-expand-lg fixed-top"><div class="container"><a class="navbar-brand" href="#top">Umer Rafiq</a><button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#nav"><span class="navbar-toggler-icon"></span></button><div class="collapse navbar-collapse" id="nav"><ul class="navbar-nav ms-auto"><li class="nav-item"><a class="nav-link" href="#about">About</a></li><li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li><li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li><li class="nav-item"><a class="nav-link" href="#experience">Experience</a></li><li class="nav-item"><a class="nav-link" href="#education">Coursework</a></li><li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li></ul></div></div></nav>
-<main id="top">
-<section class="hero"><span class="orb o1"></span><span class="orb o2"></span><span class="orb o3"></span><div class="container"><div class="hero-grid"><div><span class="eyebrow"><span class="dot"></span> AI / ML Engineer • AI Systems Builder</span><h1>Building <span class="gradient">intelligent systems</span> for real-world problems.</h1><p class="lead">I'm Umer Rafiq, a <strong>B.Tech Computer Science & Engineering graduate</strong> from the University of Kashmir. I build practical solutions across Machine Learning, Generative AI, Agentic AI, RAG, MCP, backend engineering, and intelligent automation.</p><div class="actions"><a class="btnx primary" href="#projects">Explore Projects</a><a class="btnx" href="https://drive.google.com/file/d/1PP9eSLAwM7gZqpwdbWBBq1lD9gpkBHV-/view?usp=drive_link" target="_blank">View Resume</a><a class="btnx" href="https://github.com/umerrafiq04" target="_blank">GitHub</a></div></div><aside class="glass profile"><small>What I work on</small><h3>AI + Software Engineering</h3><p class="about">Designing, building, and integrating intelligent applications that combine models, data, APIs, and automation.</p><div class="profile-line"></div><div class="metric"><span>Core domain</span><strong>Artificial Intelligence</strong></div><div class="metric"><span>Specialization</span><strong>LLM Systems</strong></div><div class="metric"><span>Engineering</span><strong>Python / FastAPI</strong></div><div class="metric"><span>Focus</span><strong>Agents • RAG • ML</strong></div></aside></div></div></section>
-<section class="reveal" id="about"><div class="container"><span class="kicker">About</span><h2 class="section-title">An AI engineer focused on building useful systems.</h2><p class="sub">Combining computer science fundamentals with hands-on experience in modern AI and backend technologies.</p><div class="row g-4 mt-3"><div class="col-lg-7"><div class="glass p-4 h-100"><p class="about">I recently graduated with a B.Tech in Computer Science & Engineering from the University of Kashmir. My interests span machine learning, deep learning, NLP, generative AI, agentic workflows, retrieval systems, and backend infrastructure.</p><p class="about mb-0">I enjoy turning ideas into working products — integrating models and tools, designing APIs, working with data, and automating real-world workflows.</p></div></div><div class="col-lg-5"><div class="glass p-4 h-100"><span class="kicker">Core areas</span><div class="mt-2"><span class="pill">Machine Learning</span><span class="pill">Generative AI</span><span class="pill">Agentic AI</span><span class="pill">RAG</span><span class="pill">MCP</span><span class="pill">LLM Applications</span><span class="pill">NLP</span><span class="pill">Backend Engineering</span><span class="pill">Automation</span></div></div></div></div></div></section>
-<section class="reveal" id="skills"><div class="container"><span class="kicker">Technical stack</span><h2 class="section-title">Tools I use to build AI applications.</h2><div class="row g-4 mt-3"><div class="col-lg-4"><div class="glass skillbox"><h4>AI / ML</h4><span class="pill">Machine Learning</span><span class="pill">Deep Learning</span><span class="pill">NLP</span><span class="pill">Generative AI</span><span class="pill">Agentic AI</span><span class="pill">Transformers</span><span class="pill">Computer Vision</span><span class="pill">Time Series</span><span class="pill">Scikit-learn</span><span class="pill">PyTorch</span><span class="pill">TensorFlow</span></div></div><div class="col-lg-4"><div class="glass skillbox"><h4>AI Engineering</h4><span class="pill">LangChain</span><span class="pill">LangGraph</span><span class="pill">MCP</span><span class="pill">RAG</span><span class="pill">FAISS</span><span class="pill">Chroma</span><span class="pill">Hugging Face</span><span class="pill">n8n</span><span class="pill">Webhooks</span><span class="pill">LLM APIs</span></div></div><div class="col-lg-4"><div class="glass skillbox"><h4>Backend & Data</h4><span class="pill">Python</span><span class="pill">SQL</span><span class="pill">FastAPI</span><span class="pill">REST APIs</span><span class="pill">NoSQL</span><span class="pill">Data Modeling</span><span class="pill">Docker</span><span class="pill">AWS</span><span class="pill">Git</span><span class="pill">JavaScript</span></div></div></div></div></section>
-<section class="reveal" id="projects"><div class="container"><span class="kicker">Selected work</span><h2 class="section-title">Projects I’ve built.</h2><p class="sub">AI, machine learning, backend, and automation projects.</p><div class="row g-4 mt-3"><div class="col-md-6 col-lg-4"><article class="glass project"><span class="num">01 — AI SYSTEMS</span><h3>MCP Multi-Server AI Platform</h3><p>Multi-server AI architecture connecting LLMs to external tools and services through Model Context Protocol.</p><div class="tags">MCP · FastAPI · LangGraph</div><a href="https://github.com/umerrafiq04/MCP_CLIENT" target="_blank">View repository →</a></article></div><div class="col-md-6 col-lg-4"><article class="glass project"><span class="num">02 — RAG</span><h3>Corrective RAG</h3><p>Retrieval workflow that evaluates and improves retrieved evidence before generating answers.</p><div class="tags">RAG · LangGraph · LLMs</div><a href="https://github.com/umerrafiq04/CORRECTIVE_RAG" target="_blank">View repository →</a></article></div><div class="col-md-6 col-lg-4"><article class="glass project"><span class="num">03 — RAG</span><h3>Self-RAG</h3><p>Self-evaluating retrieval and generation workflow for more dependable LLM responses.</p><div class="tags">Self-RAG · RAG · NLP</div><a href="https://github.com/umerrafiq04/SELF_RAG" target="_blank">View repository →</a></article></div><div class="col-md-6 col-lg-4"><article class="glass project"><span class="num">04 — MACHINE LEARNING</span><h3>Spatio-Temporal Climate Forecasting</h3><p>Graph-based deep learning for forecasting climate variables across spatially connected nodes.</p><div class="tags">GNN · GRU · Time Series</div><a href="https://github.com/umerrafiq04/spatio-temporal-climate-gnn-lstm" target="_blank">View repository →</a></article></div><div class="col-md-6 col-lg-4"><article class="glass project"><span class="num">05 — AI APPLICATIONS</span><h3>AI Job Application Assistant</h3><p>AI-assisted workflow for streamlining job-search and application tasks with intelligent automation.</p><div class="tags">AI Agents · Automation · Python</div><a href="https://github.com/umerrafiq04/AI-Job-Application-Assistantt" target="_blank">View repository →</a></article></div><div class="col-md-6 col-lg-4"><article class="glass project"><span class="num">06 — LLM APPLICATION</span><h3>AI Conversational Chatbot</h3><p>Conversational system built around LangGraph and Mistral for structured multi-step interaction.</p><div class="tags">LangGraph · Mistral · Python</div><a href="https://github.com/umerrafiq04/AI-Conversational-Chatbot-with-LangGraph-Mistral" target="_blank">View repository →</a></article></div><div class="col-md-6 col-lg-4"><article class="glass project"><span class="num">07 — CLIMATE ML</span><h3>GraphNODE Precipitation Forecasting for Kashmir</h3><p>GraphNODE-based climate forecasting across a 126-node Kashmir domain, comparing geo and hybrid graph variants for 12-month prediction.</p><div class="tags">GraphNODE · GNN · Neural ODE · Climate ML</div></article></div></div></div></section>
-<section class="reveal" id="experience"><div class="container"><span class="kicker">Experience</span><h2 class="section-title">Professional experience.</h2><div class="glass p-4 p-lg-5 mt-3"><div class="timeline"><div class="item"><h4>AI Automation Intern — BrandSparc</h4><small>April 2026 – May 2026</small><p>Built AI-powered workflow automation using n8n, APIs, webhooks, JavaScript, and Google Sheets, including an automated YouTube video-to-shorts pipeline.</p></div><div class="item"><h4>Full Stack Web Development Intern — Acmegrade</h4><small>April 2024 – May 2024</small><p>Designed and developed a Library Management System using a modern full-stack workflow with a React-based frontend, RESTful backend services, and persistent database storage for book inventory, member records, and issue/return transactions.</p><p>Built core CRUD workflows and search/filter functionality with clean component architecture and maintainable frontend state management.</p><p>Collaborated on API design and database schema, translating functional requirements into a working end-to-end application deployed for internal review.</p></div></div></div></div></section>
-<section class="reveal" id="education"><div class="container"><span class="kicker">Coursework</span><h2 class="section-title">Courses & learning.</h2><div class="row g-4 mt-3"><div class="col-md-6"><div class="glass course"><h4>Complete Data Science, Machine Learning, Deep Learning & NLP Bootcamp</h4><p>Udemy · Krish Naik</p></div></div><div class="col-md-6"><div class="glass course"><h4>Introduction to Front-End Web Development</h4><p>Coursera</p></div></div></div></div></section>
-<section class="reveal" id="contact"><div class="container"><div class="glass contact"><span class="kicker">Let’s connect</span><h2 class="section-title">Open to AI engineering and meaningful opportunities.</h2><p class="sub mx-auto">Interested in AI engineering, backend development, intelligent automation, and real-world machine learning applications.</p><div class="actions justify-content-center"><a class="btnx primary" href="https://drive.google.com/file/d/1PP9eSLAwM7gZqpwdbWBBq1lD9gpkBHV-/view?usp=drive_link" target="_blank">View Resume</a><a class="btnx" href="mailto:rafiqyatooumer@gmail.com">Email Me</a><a class="btnx" href="https://www.linkedin.com/in/umer-rafiq-6410312a5" target="_blank">LinkedIn</a></div></div></div></section>
+<a class="skip" href="#main">Skip to content</a>
+<canvas id="space-canvas" aria-hidden="true"></canvas>
+<div id="progress" aria-hidden="true"></div>
+
+<nav class="navbar navbar-expand-lg fixed-top" aria-label="Main navigation">
+  <div class="container">
+    <a class="navbar-brand brand" href="#top">Umer Rafiq</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav"
+            aria-controls="nav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="nav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="#stack">Stack</a></li>
+        <li class="nav-item"><a class="nav-link" href="#featured">Projects</a></li>
+        <li class="nav-item"><a class="nav-link" href="#experience">Experience</a></li>
+        <li class="nav-item"><a class="nav-link" href="#education">Coursework</a></li>
+        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<main id="main">
+<div id="top"></div>
+
+<!-- ================= HERO ================= -->
+<section class="hero" aria-labelledby="hero-title">
+  <span class="orb o1" aria-hidden="true"></span>
+  <span class="orb o2" aria-hidden="true"></span>
+  <span class="orb o3" aria-hidden="true"></span>
+  <div class="container">
+    <div class="hero-grid">
+      <div>
+        <span class="status"><span class="dot" aria-hidden="true"></span> AI Engineer · Open to opportunities</span>
+        <h1 id="hero-title">AI Engineer building intelligent, production-oriented systems.</h1>
+        <p class="lead">
+          I'm Umer Rafiq, a <strong>computer science engineer</strong> working across generative AI, LLM and agentic
+          systems. I build the full engineering system around AI — LangGraph agents and tool calling, retrieval
+          pipelines with grading and grounding, FastAPI backends and REST APIs, SQL and data workflows, deep learning
+          models, and the guardrails, auth and deployment that hold it together.
+        </p>
+        <div class="actions">
+          <a class="btnx primary" href="#featured">View projects</a>
+          <a class="btnx" href="https://github.com/umerrafiq04" target="_blank" rel="noopener">GitHub</a>
+          <a class="btnx" href="#contact">Contact me</a>
+          <a class="btnx" href="https://drive.google.com/file/d/1PP9eSLAwM7gZqpwdbWBBq1lD9gpkBHV-/view?usp=drive_link" target="_blank" rel="noopener">Resume</a>
+        </div>
+      </div>
+
+      <aside class="glass spec" aria-label="Profile summary">
+        <h3>What I work on</h3>
+        <p>Designing and shipping applications that combine models, retrieval, tools, APIs, data and automation into one working system.</p>
+        <div class="spec-line" aria-hidden="true"></div>
+        <div class="metric"><span>Core domain</span><strong>Generative AI &amp; ML</strong></div>
+        <div class="metric"><span>Specialisation</span><strong>LLM &amp; agentic systems</strong></div>
+        <div class="metric"><span>Engineering</span><strong>Python · FastAPI</strong></div>
+        <div class="metric"><span>Orchestration</span><strong>LangGraph · LangChain · MCP</strong></div>
+        <div class="metric"><span>Also</span><strong>RAG · SQL · Deep learning</strong></div>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<!-- ================= ABOUT ================= -->
+<section class="reveal" id="about" aria-labelledby="about-title">
+  <div class="container">
+    <div class="section-head">
+      <p class="kicker">About</p>
+      <h2 class="section-title" id="about-title">An engineer who builds the system around the model.</h2>
+      <p class="sub">Shipping generative AI, agent orchestration, retrieval, backend services and deep learning —
+      built end to end, not assembled from tutorials.</p>
+    </div>
+    <div class="row g-4 mt-3">
+      <div class="col-lg-7">
+        <div class="glass p-4 h-100">
+          <p style="color:#bac9dc">I'm a computer science engineer, and most of my work sits where models meet real
+          software: LangGraph state machines with human approval gates, MCP tool servers, corrective retrieval
+          pipelines, natural-language interfaces to SQL that can't be talked into a destructive query, and FastAPI
+          services that hold the trust boundary.</p>
+          <p class="mb-0" style="color:#bac9dc">Alongside that I work on machine learning and deep learning — graph
+          neural networks, neural ODEs and time-series forecasting — and on the unglamorous parts that decide whether a
+          system is usable: schema validation, data normalisation, hallucination guardrails, auth, and deployment.</p>
+        </div>
+      </div>
+      <div class="col-lg-5">
+        <div class="glass p-4 h-100">
+          <p class="cat">Core areas</p>
+          <div>
+            <span class="pill">Generative AI</span><span class="pill">LLM applications</span>
+            <span class="pill">Agentic AI</span><span class="pill">RAG</span><span class="pill">MCP</span>
+            <span class="pill">Machine Learning</span><span class="pill">Deep Learning</span>
+            <span class="pill">NLP</span><span class="pill">Backend engineering</span>
+            <span class="pill">Data pipelines</span><span class="pill">AI reliability</span>
+            <span class="pill">Automation</span><span class="pill">Deployment</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= STACK ================= -->
+<section class="reveal" id="stack" aria-labelledby="stack-title">
+  <div class="container">
+    <div class="section-head">
+      <p class="kicker">Technical stack</p>
+      <h2 class="section-title" id="stack-title">Tools I build with.</h2>
+      <p class="sub">Grouped by the job they do rather than by hype.</p>
+    </div>
+    <div class="row g-4 mt-3">
+      <div class="col-md-6 col-lg-4">
+        <div class="glass p-4 h-100">
+          <h4 style="font-size:1.05rem;margin-bottom:12px">Languages</h4>
+          <span class="pill">Python</span><span class="pill">SQL</span><span class="pill">JavaScript</span>
+          <span class="pill">C</span><span class="pill">HTML5</span><span class="pill">CSS3</span>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4">
+        <div class="glass p-4 h-100">
+          <h4 style="font-size:1.05rem;margin-bottom:12px">AI &amp; machine learning</h4>
+          <span class="pill">Generative AI</span><span class="pill">LLMs</span><span class="pill">Machine Learning</span>
+          <span class="pill">Deep Learning</span><span class="pill">NLP</span><span class="pill">Transformers</span>
+          <span class="pill">Computer Vision</span><span class="pill">Time series</span>
+          <span class="pill">Graph neural networks</span><span class="pill">Neural ODEs</span>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4">
+        <div class="glass p-4 h-100">
+          <h4 style="font-size:1.05rem;margin-bottom:12px">AI frameworks &amp; agents</h4>
+          <span class="pill">LangGraph</span><span class="pill">LangChain</span><span class="pill">MCP</span>
+          <span class="pill">FastMCP</span><span class="pill">Tool calling</span><span class="pill">RAG</span>
+          <span class="pill">Corrective RAG</span><span class="pill">Prompt engineering</span>
+          <span class="pill">Human-in-the-loop</span><span class="pill">Hugging Face</span>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4">
+        <div class="glass p-4 h-100">
+          <h4 style="font-size:1.05rem;margin-bottom:12px">Backend &amp; APIs</h4>
+          <span class="pill">FastAPI</span><span class="pill">REST APIs</span><span class="pill">Uvicorn</span>
+          <span class="pill">Pydantic</span><span class="pill">AsyncIO</span><span class="pill">Streamlit</span>
+          <span class="pill">Webhooks</span><span class="pill">NDJSON streaming</span>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4">
+        <div class="glass p-4 h-100">
+          <h4 style="font-size:1.05rem;margin-bottom:12px">Data &amp; storage</h4>
+          <span class="pill">pandas</span><span class="pill">NumPy</span><span class="pill">SQLAlchemy</span>
+          <span class="pill">SQLite</span><span class="pill">PostgreSQL</span><span class="pill">NoSQL</span>
+          <span class="pill">Chroma</span><span class="pill">FAISS</span><span class="pill">Schema design</span>
+          <span class="pill">Data modeling</span>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4">
+        <div class="glass p-4 h-100">
+          <h4 style="font-size:1.05rem;margin-bottom:12px">ML libraries &amp; services</h4>
+          <span class="pill">PyTorch</span><span class="pill">PyTorch Geometric</span><span class="pill">TensorFlow</span>
+          <span class="pill">scikit-learn</span><span class="pill">torchdiffeq</span><span class="pill">xarray</span>
+          <span class="pill">Mistral API</span><span class="pill">Tavily</span><span class="pill">Gmail API</span>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4">
+        <div class="glass p-4 h-100">
+          <h4 style="font-size:1.05rem;margin-bottom:12px">Security &amp; auth</h4>
+          <span class="pill">OAuth2</span><span class="pill">PKCE</span><span class="pill">JWT</span>
+          <span class="pill">bcrypt</span><span class="pill">SSRF protection</span>
+          <span class="pill">Approval gates</span><span class="pill">API authentication</span>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4">
+        <div class="glass p-4 h-100">
+          <h4 style="font-size:1.05rem;margin-bottom:12px">Tooling &amp; deployment</h4>
+          <span class="pill">Git</span><span class="pill">GitHub</span><span class="pill">Docker</span>
+          <span class="pill">AWS</span><span class="pill">Railway</span><span class="pill">n8n</span>
+          <span class="pill">FFmpeg</span><span class="pill">Postman</span>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4">
+        <div class="glass p-4 h-100">
+          <h4 style="font-size:1.05rem;margin-bottom:12px">Computer science</h4>
+          <span class="pill">Data structures &amp; algorithms</span><span class="pill">OOP</span>
+          <span class="pill">Operating systems</span><span class="pill">Computer networks</span>
+          <span class="pill">DBMS</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= FEATURED ================= -->
+<section class="reveal" id="featured" aria-labelledby="featured-title">
+  <div class="container">
+    <div class="section-head">
+      <p class="kicker">Featured work</p>
+      <h2 class="section-title" id="featured-title">Three systems worth reading closely.</h2>
+      <p class="sub">Each is a full pipeline rather than a model call. Open the case study for architecture,
+      engineering decisions and implementation detail.</p>
+    </div>
+
+    <div class="row g-4 mt-3">
+      <div class="col-lg-4 feat">
+        <article class="glass pcard-inner">
+          <div class="meta"><span class="rank">01</span><span class="cat">GenAI · Agentic AI · Arclent</span></div>
+          <h3>AI-Powered Creator Job Description Generator</h3>
+          <p class="blurb">Turns a recruiter's one-line request into a complete, structured, editable job listing
+          through a guided conversation — with guardrails that stop the model inventing requirements.</p>
+          <div class="techline">
+            <span class="pill">LangGraph</span><span class="pill">FastAPI</span><span class="pill">Mistral</span>
+            <span class="pill">Python</span><span class="pill">SQL</span>
+          </div>
+          <div class="card-actions">
+            <button class="btnx primary sm" type="button" data-case="creator-jd">View case study</button>
+            <a class="btnx sm" href="https://arclent-production.up.railway.app/recruiter.html" target="_blank" rel="noopener">Live demo</a>
+            <a class="btnx sm" href="https://github.com/umerrafiq04/arclent" target="_blank" rel="noopener">GitHub</a>
+          </div>
+        </article>
+      </div>
+
+      <div class="col-lg-4 feat">
+        <article class="glass pcard-inner">
+          <div class="meta"><span class="rank">02</span><span class="cat">Agentic AI · MCP · RAG</span></div>
+          <h3>AI Platform</h3>
+          <p class="blurb">A personal AI workspace built around a LangGraph tool-calling agent, MCP tools, and
+          document/email RAG, with a FastAPI backend and an independent three-process service architecture.</p>
+          <div class="techline">
+            <span class="pill">LangGraph</span><span class="pill">MCP</span><span class="pill">FastAPI</span>
+            <span class="pill">Chroma</span><span class="pill">SQLite</span>
+          </div>
+          <div class="card-actions">
+            <button class="btnx primary sm" type="button" data-case="ai-platform">View case study</button>
+            <a class="btnx sm" href="https://github.com/umerrafiq04/ai-platform" target="_blank" rel="noopener">GitHub</a>
+          </div>
+        </article>
+      </div>
+
+      <div class="col-lg-4 feat">
+        <article class="glass pcard-inner">
+          <div class="meta"><span class="rank">03</span><span class="cat">Machine Learning · Research</span></div>
+          <h3>Spatio-Temporal Climate Prediction using GNN + LSTM</h3>
+          <p class="blurb">Forecasts climate variables across a spatially connected grid by combining a graph
+          convolutional encoder, a recurrent temporal aggregator and a continuous-time neural ODE.</p>
+          <div class="techline">
+            <span class="pill">PyTorch</span><span class="pill">PyTorch Geometric</span><span class="pill">Neural ODE</span>
+            <span class="pill">GNN</span><span class="pill">Time series</span>
+          </div>
+          <div class="card-actions">
+            <button class="btnx primary sm" type="button" data-case="climate">View case study</button>
+            <a class="btnx sm" href="https://github.com/umerrafiq04/spatio-temporal-climate-gnn-lstm" target="_blank" rel="noopener">GitHub</a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= MORE PROJECTS ================= -->
+<section class="reveal" id="projects" aria-labelledby="more-title">
+  <div class="container">
+    <div class="section-head">
+      <p class="kicker">More projects</p>
+      <h2 class="section-title" id="more-title">Other things I've built.</h2>
+      <p class="sub">AI applications, retrieval systems, backend services, automation and machine learning research.</p>
+    </div>
+
+    <div class="filters" role="group" aria-label="Filter projects by category">
+      <button class="chip" type="button" data-filter="all" aria-pressed="true">All</button>
+      <button class="chip" type="button" data-filter="ai" aria-pressed="false">GenAI / LLM</button>
+      <button class="chip" type="button" data-filter="rag" aria-pressed="false">RAG / Agents</button>
+      <button class="chip" type="button" data-filter="ml" aria-pressed="false">Machine Learning</button>
+      <button class="chip" type="button" data-filter="be" aria-pressed="false">Backend</button>
+      <button class="chip" type="button" data-filter="data" aria-pressed="false">Data</button>
+    </div>
+    <p id="filter-status" aria-live="polite" style="font-size:.86rem;color:var(--dim);margin-bottom:4px"></p>
+
+    <div class="row g-4 mt-1" id="grid">
+
+      <div class="col-md-6 col-lg-4 pcard" data-cat="ai rag be">
+        <article class="glass pcard-inner">
+          <div class="meta"><span class="cat">GenAI · Recruiter workflows · Arclent</span></div>
+          <h3>Reach Out With AI</h3>
+          <p class="blurb">Generates personalised recruiter outreach from candidate and job context, routes it through
+          human review before sending, and classifies replies to drive the next step.</p>
+          <div class="techline">
+            <span class="pill">LLMs</span><span class="pill">Python</span><span class="pill">Human-in-the-loop</span>
+          </div>
+          <div class="card-actions">
+            <button class="btnx primary sm" type="button" data-case="reach-out">View details</button>
+            <a class="btnx sm" href="https://web-production-5173c.up.railway.app/" target="_blank" rel="noopener">Live demo</a>
+            <a class="btnx sm" href="https://github.com/umerrafiq04/reach-out-with-ai" target="_blank" rel="noopener">GitHub</a>
+          </div>
+        </article>
+      </div>
+
+      <div class="col-md-6 col-lg-4 pcard" data-cat="ai rag be data">
+        <article class="glass pcard-inner">
+          <div class="meta"><span class="cat">GenAI · Data extraction · Arclent</span></div>
+          <h3>Automated Company Onboarding</h3>
+          <p class="blurb">Turns a company website URL into a structured, editable company profile by crawling it
+          safely and running evidence-based extraction — with SSRF protection, not a naive scraper.</p>
+          <div class="techline">
+            <span class="pill">LangGraph</span><span class="pill">FastAPI</span><span class="pill">Mistral</span>
+          </div>
+          <div class="card-actions">
+            <button class="btnx primary sm" type="button" data-case="onboarding">View details</button>
+            <a class="btnx sm" href="https://github.com/umerrafiq04/arclent-company-onboarding" target="_blank" rel="noopener">GitHub</a>
+          </div>
+        </article>
+      </div>
+
+      <div class="col-md-6 col-lg-4 pcard" data-cat="ai rag data be">
+        <article class="glass pcard-inner">
+          <div class="meta"><span class="cat">RAG · Document AI</span></div>
+          <h3>AI-Based DPR Evaluation System</h3>
+          <p class="blurb">Evaluates project report PDFs against a guideline knowledge base and returns an explainable,
+          page-referenced compliance and risk report — rules and retrieval first, LLM only where reasoning is needed.</p>
+          <div class="techline">
+            <span class="pill">RAG</span><span class="pill">LangGraph</span><span class="pill">OCR</span>
+          </div>
+          <div class="card-actions">
+            <button class="btnx primary sm" type="button" data-case="dpr">View details</button>
+            <a class="btnx sm" href="https://github.com/umerrafiq04/dpr-evaluation-system" target="_blank" rel="noopener">GitHub</a>
+          </div>
+        </article>
+      </div>
+
+      <div class="col-md-6 col-lg-4 pcard" data-cat="ml data">
+        <article class="glass pcard-inner">
+          <div class="meta"><span class="cat">Machine Learning · Capstone</span></div>
+          <h3>GraphNODE Precipitation Forecasting for Kashmir</h3>
+          <p class="blurb">12-month climate forecasting across a 126-node Kashmir domain, comparing geographic against
+          hybrid graph construction to test what edge design actually buys you.</p>
+          <div class="techline">
+            <span class="pill">GCN-ODE</span><span class="pill">PyTorch</span><span class="pill">Ablation study</span>
+          </div>
+          <div class="card-actions">
+            <button class="btnx primary sm" type="button" data-case="graphnode-kashmir">View details</button>
+          </div>
+        </article>
+      </div>
+
+      <div class="col-md-6 col-lg-4 pcard" data-cat="ai rag be">
+        <article class="glass pcard-inner">
+          <div class="meta"><span class="cat">Agentic AI · MCP</span></div>
+          <h3>MCP Multi-Server AI Client</h3>
+          <p class="blurb">Connects LLMs to external tools and services across multiple independent servers through the
+          Model Context Protocol, with tool discovery and routing.</p>
+          <div class="techline">
+            <span class="pill">MCP</span><span class="pill">FastAPI</span><span class="pill">LangGraph</span>
+          </div>
+          <div class="card-actions">
+            <button class="btnx primary sm" type="button" data-case="mcp-client">View details</button>
+            <a class="btnx sm" href="https://github.com/umerrafiq04/MCP_CLIENT" target="_blank" rel="noopener">GitHub</a>
+          </div>
+        </article>
+      </div>
+
+      <div class="col-md-6 col-lg-4 pcard" data-cat="ai rag">
+        <article class="glass pcard-inner">
+          <div class="meta"><span class="cat">RAG · Retrieval</span></div>
+          <h3>Corrective RAG</h3>
+          <p class="blurb">A retrieval workflow that grades its own evidence before generating, and goes looking for
+          better sources when the retrieved context isn't good enough to answer from.</p>
+          <div class="techline">
+            <span class="pill">RAG</span><span class="pill">LangGraph</span><span class="pill">LLMs</span>
+          </div>
+          <div class="card-actions">
+            <button class="btnx primary sm" type="button" data-case="crag">View details</button>
+            <a class="btnx sm" href="https://github.com/umerrafiq04/CORRECTIVE_RAG" target="_blank" rel="noopener">GitHub</a>
+          </div>
+        </article>
+      </div>
+
+      <div class="col-md-6 col-lg-4 pcard" data-cat="ai rag">
+        <article class="glass pcard-inner">
+          <div class="meta"><span class="cat">RAG · Retrieval</span></div>
+          <h3>Self-RAG</h3>
+          <p class="blurb">A self-evaluating retrieval and generation workflow — the model decides whether retrieval is
+          needed and whether its own answer is actually supported by the evidence.</p>
+          <div class="techline">
+            <span class="pill">Self-RAG</span><span class="pill">NLP</span><span class="pill">LLMs</span>
+          </div>
+          <div class="card-actions">
+            <button class="btnx primary sm" type="button" data-case="self-rag">View details</button>
+            <a class="btnx sm" href="https://github.com/umerrafiq04/SELF_RAG" target="_blank" rel="noopener">GitHub</a>
+          </div>
+        </article>
+      </div>
+
+      <div class="col-md-6 col-lg-4 pcard" data-cat="ai rag be">
+        <article class="glass pcard-inner">
+          <div class="meta"><span class="cat">GenAI · Automation</span></div>
+          <h3>AI Job Application Assistant</h3>
+          <p class="blurb">An agent-driven workflow that takes the repetitive parts of job searching and applying off a
+          candidate's hands.</p>
+          <div class="techline">
+            <span class="pill">AI agents</span><span class="pill">Python</span><span class="pill">Automation</span>
+          </div>
+          <div class="card-actions">
+            <button class="btnx primary sm" type="button" data-case="job-assistant">View details</button>
+            <a class="btnx sm" href="https://github.com/umerrafiq04/AI-Job-Application-Assistantt" target="_blank" rel="noopener">GitHub</a>
+          </div>
+        </article>
+      </div>
+
+      <div class="col-md-6 col-lg-4 pcard" data-cat="ai rag">
+        <article class="glass pcard-inner">
+          <div class="meta"><span class="cat">GenAI · LLM applications</span></div>
+          <h3>AI Conversational Chatbot</h3>
+          <p class="blurb">A conversational system built on LangGraph and Mistral that models a dialogue as explicit
+          state transitions rather than a single prompt loop.</p>
+          <div class="techline">
+            <span class="pill">LangGraph</span><span class="pill">Mistral</span><span class="pill">Python</span>
+          </div>
+          <div class="card-actions">
+            <button class="btnx primary sm" type="button" data-case="chatbot">View details</button>
+            <a class="btnx sm" href="https://github.com/umerrafiq04/AI-Conversational-Chatbot-with-LangGraph-Mistral" target="_blank" rel="noopener">GitHub</a>
+          </div>
+        </article>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ================= EXPERIENCE ================= -->
+<section class="reveal" id="experience" aria-labelledby="exp-title">
+  <div class="container">
+    <div class="section-head">
+      <p class="kicker">Experience</p>
+      <h2 class="section-title" id="exp-title">Where I've built things.</h2>
+    </div>
+    <div class="glass p-4 p-lg-5 mt-4">
+      <div class="timeline">
+
+        <div class="item now">
+          <h4>AI Engineer — Arclent</h4>
+          <p class="when">Ongoing</p>
+          <ul>
+            <li>Building the AI layer of an online recruiting platform: conversational job posting, recruiter outreach, and automated company onboarding, each shipped as a working module rather than a prototype.</li>
+            <li>Designed LangGraph workflows over Mistral for multi-step information collection, structured extraction and controlled regeneration, with prompt-level guardrails that keep generated content grounded in what the recruiter actually supplied.</li>
+            <li>Built the FastAPI backend and REST APIs behind these modules, including structured data extraction, company-name normalisation, evidence consolidation and confidence assessment.</li>
+            <li>Implemented human-in-the-loop review across the platform — nothing generated is published or sent without a recruiter confirming it — plus multi-tenant recruiter dashboards, hiring-status controls and a public job board.</li>
+            <li>Handled the full stack around the AI: HTML, CSS and vanilla JavaScript front end, SQL persistence, and deployment on Railway.</li>
+          </ul>
+        </div>
+
+        <div class="item">
+          <h4>AI &amp; Automation Intern — BrandSparc</h4>
+          <p class="when">April 2026 – May 2026</p>
+          <ul>
+            <li>Built an AI-powered video-to-shorts generator with Python, FastAPI and FFmpeg, automating ingestion, segmentation and rendering so a full-length upload is repurposed without manual editing — the internship's capstone project.</li>
+            <li>Engineered end-to-end workflow automations in n8n using REST APIs, webhooks, JavaScript and Google Sheets, replacing recurring manual business processes with scheduled pipelines.</li>
+            <li>Integrated multiple third-party services into unified data-processing workflows, standardising handoffs between tools with inconsistent API contracts.</li>
+            <li>Worked with OAuth2 authorisation flows and API testing tooling (Postman, Hoppscotch) across the integrations.</li>
+          </ul>
+        </div>
+
+        <div class="item">
+          <h4>Full Stack Web Development Intern — Acmegrade</h4>
+          <p class="when">April 2024 – May 2024</p>
+          <ul>
+            <li>Designed and developed a Library Management System with a React front end, RESTful backend services and persistent database storage for book inventory, member records and issue/return transactions.</li>
+            <li>Built core CRUD workflows and search/filter functionality with a clean component architecture and maintainable front-end state management.</li>
+            <li>Collaborated on API design and database schema, translating functional requirements into a working end-to-end application deployed for internal review.</li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= COURSEWORK ================= -->
+<section class="reveal" id="education" aria-labelledby="edu-title">
+  <div class="container">
+    <div class="section-head">
+      <p class="kicker">Education &amp; coursework</p>
+      <h2 class="section-title" id="edu-title">Where the fundamentals came from.</h2>
+    </div>
+    <div class="row g-4 mt-3">
+      <div class="col-md-4">
+        <div class="glass course">
+          <h4>B.Tech, Computer Science &amp; Engineering</h4>
+          <p>University of Kashmir</p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="glass course">
+          <h4>Complete Data Science, Machine Learning, Deep Learning &amp; NLP Bootcamp</h4>
+          <p>Udemy · Krish Naik</p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="glass course">
+          <h4>Introduction to Front-End Web Development</h4>
+          <p>Coursera</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= CONTACT ================= -->
+<section class="reveal" id="contact" aria-labelledby="contact-title">
+  <div class="container">
+    <div class="glass contact">
+      <p class="kicker">Get in touch</p>
+      <h2 class="section-title" id="contact-title">Open to AI engineering roles.</h2>
+      <p class="sub mx-auto">Interested in generative AI, LLM and agentic systems, machine learning, backend
+      engineering and applied AI work. The fastest way to reach me is email.</p>
+      <div class="actions">
+        <a class="btnx primary" href="mailto:rafiqyatooumer@gmail.com">Email me</a>
+        <a class="btnx" href="https://www.linkedin.com/in/umer-rafiq-6410312a5" target="_blank" rel="noopener">LinkedIn</a>
+        <a class="btnx" href="https://github.com/umerrafiq04" target="_blank" rel="noopener">GitHub</a>
+        <a class="btnx" href="https://drive.google.com/file/d/1PP9eSLAwM7gZqpwdbWBBq1lD9gpkBHV-/view?usp=drive_link" target="_blank" rel="noopener">Resume</a>
+      </div>
+    </div>
+  </div>
+</section>
 </main>
-<footer><div class="container d-flex justify-content-between flex-wrap gap-2"><span>© 2026 Umer Rafiq</span><span>AI / ML Engineer • AI Systems Builder</span></div></footer>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script><script>const o=new IntersectionObserver(e=>e.forEach(x=>x.isIntersecting&&x.target.classList.add('show')),{threshold:.12});document.querySelectorAll('.reveal').forEach(x=>o.observe(x));</script>
-</body></html>
+
+<footer>
+  <div class="container d-flex justify-content-between flex-wrap gap-2">
+    <span>© 2026 Umer Rafiq</span>
+    <span>AI Engineer · Generative AI, agents and machine learning</span>
+  </div>
+</footer>
+
+<!-- ================= CASE STUDY DIALOG ================= -->
+<dialog id="case" aria-labelledby="case-title">
+  <div class="case-shell">
+    <header class="case-head">
+      <div>
+        <span class="cat" id="case-cat"></span>
+        <h2 id="case-title"></h2>
+      </div>
+      <button class="case-close" type="button" id="case-close" aria-label="Close case study">&times;</button>
+    </header>
+    <div class="case-body" id="case-body" tabindex="-1"></div>
+  </div>
+</dialog>
+
+<!-- ================= CASE STUDY CONTENT (hidden source) ================= -->
+<div id="case-store" hidden>
+
+  <!-- 01 Creator JD Generator -->
+  <div id="case-creator-jd" data-title="AI-Powered Creator Job Description Generator" data-cat="GenAI · Agentic AI · Arclent">
+    <h3>Problem</h3>
+    <p>Recruiters know what they want in plain language — “I need a TikTok/Instagram video editor” — but a job listing
+    that candidates can actually apply to needs far more: required skills, responsibilities, target platforms,
+    location, salary, and screening questions. Writing that out is slow, and asking a model to do it in one shot
+    produces confident, invented requirements.</p>
+
+    <h3>Solution</h3>
+    <p>A conversational job-posting layer for <strong>Arclent</strong>, the online recruiting platform I'm building.
+    The recruiter describes the role however they like; a LangGraph workflow works out what's missing, collects it
+    through structured choices, and produces a complete, application-ready job description that the recruiter can edit
+    and publish. It runs live as a standalone tool and slots into the wider platform as its job-posting layer.</p>
+
+    <h3>How it works</h3>
+    <div class="flow" role="img" aria-label="Flow: natural-language request, AI information collection, structured job description, recruiter editing, published job, candidate application.">
+      <span class="node">Natural-language request</span><span class="sep">→</span>
+      <span class="node">AI information collection</span><span class="sep">→</span>
+      <span class="node core">Structured job description</span><span class="sep">→</span>
+      <span class="node">Recruiter editing</span><span class="sep">→</span>
+      <span class="node">Published job</span><span class="sep">→</span>
+      <span class="node edge">Candidate application</span>
+    </div>
+    <p>The conversation is a multi-step state machine, not a chat loop. Each turn knows which fields are still
+    unfilled, asks about one of them, and writes the answer back into a structured job state that the live preview
+    panel reads from.</p>
+
+    <h3>Engineering problems solved</h3>
+    <ul>
+      <li><strong>Hallucinated requirements.</strong> Generation is constrained so the model can't invent degrees,
+      certifications, years of experience, salary figures or tools that were never mentioned. Fields with no
+      supporting input are surfaced as questions rather than quietly filled in — the recruiter stays in control of
+      every requirement that reaches a candidate.</li>
+      <li><strong>Edits being overwritten.</strong> Recruiter edits become the source of truth. Regeneration
+      proofreads and enhances the existing content instead of replacing it, so a hand-written responsibility survives
+      the next AI pass.</li>
+      <li><strong>State drift.</strong> The job description is held as structured state rather than free text. The
+      chat, the live editing panel and the published listing all read from and write to that one state, so they can't
+      diverge.</li>
+    </ul>
+
+    <h3>Key features</h3>
+    <ul>
+      <li>Guided collection of skills, responsibilities, target platforms, location, salary and other requirements</li>
+      <li>Recruiter-authored screening questions attached to the listing</li>
+      <li>Creator-platform targeting with badges — YouTube, TikTok, Instagram, Twitch</li>
+      <li>Multi-tenant recruiter dashboard with hiring-status controls</li>
+      <li>Admin view across posted roles, plus a public job board and candidate application flow</li>
+      <li>Chat-first responsive UI with a live job-info panel beside the conversation</li>
+    </ul>
+
+    <h3>Tech stack</h3>
+    <p>Python · FastAPI · LangGraph · LangChain · Mistral · Pydantic · REST APIs · SQL · JavaScript · HTML5 · CSS3 · Railway</p>
+
+    <div class="case-links">
+      <a class="btnx primary" href="https://arclent-production.up.railway.app/recruiter.html" target="_blank" rel="noopener">Live demo</a>
+      <a class="btnx" href="https://github.com/umerrafiq04/arclent" target="_blank" rel="noopener">GitHub</a>
+    </div>
+  </div>
+
+  <!-- 02 AI Platform -->
+  <div id="case-ai-platform" data-title="AI Platform — personal AI workspace" data-cat="Agentic AI · MCP · RAG">
+    <h3>Goal</h3>
+    <p>Build one workspace where an agent can genuinely act — search documents, query a database, read and send email,
+    run research — without that power turning into a liability. Most of the work is in the boundaries: what the model
+    is allowed to do, what it has to ask permission for, and what it never gets to touch directly.</p>
+
+    <h3>Architecture</h3>
+    <div class="arch" role="img" aria-label="Architecture: browser to Streamlit client to FastAPI backend as trust boundary, then to LangGraph agent and MCP tool server, then to Mistral, Tavily, Gmail API, SQLite and Chroma.">
+      <div class="arch-layer"><span class="node">Browser</span></div>
+      <span class="arrow" aria-hidden="true">↓</span>
+      <div class="arch-layer"><span class="node">Streamlit client</span></div>
+      <span class="arrow" aria-hidden="true">↓</span>
+      <div class="arch-layer"><span class="node core">FastAPI backend — trust boundary</span></div>
+      <span class="arrow" aria-hidden="true">↓</span>
+      <div class="arch-layer">
+        <span class="node edge">LangGraph agent</span>
+        <span class="node edge">MCP tool server (FastMCP)</span>
+      </div>
+      <span class="arrow" aria-hidden="true">↓</span>
+      <div class="arch-layer">
+        <span class="node">Mistral API</span><span class="node">Tavily</span><span class="node">Gmail API</span>
+        <span class="node">SQLite</span><span class="node">Chroma</span>
+      </div>
+      <p class="arch-note">Three independent processes over defined interfaces. The LLM's tool calls never receive a
+      trusted user identity as an argument — identity is resolved server-side.</p>
+    </div>
+    <p>The Streamlit client never touches the database, the LLM provider or the tools directly. Every request goes
+    through the FastAPI backend, which is the single place where authentication, authorisation and tool permissions
+    are decided.</p>
+
+    <h3>The core agent</h3>
+    <p>A LangGraph <code>StateGraph</code> with <code>chat_node</code>, <code>tool_router</code>,
+    <code>human_approval</code> and <code>cancel_node</code>. Destructive tools are routed through
+    <code>interrupt()</code>, which pauses the graph until a human approves or cancels. Graph state is checkpointed
+    with <code>AsyncSqliteSaver</code>, so multi-turn memory and pending approvals survive a server restart rather
+    than dying with the process.</p>
+
+    <h3>Seven modules</h3>
+    <div class="mods">
+      <div class="mod"><b>Chat / core agent</b><span>Tool-calling state machine with routing, approval gating, cancellation and durable checkpointing.</span></div>
+      <div class="mod"><b>Resume evaluator</b><span>PDF upload, structured extraction, Pydantic schema validation, conversational editing, JD keyword-overlap scoring and LLM qualitative analysis. Tailored generation may only reorder and reword existing content — it cannot fabricate skills or experience.</span></div>
+      <div class="mod"><b>Tables — natural language to SQL</b><span>Create and query tables in plain English, behind identifier allowlists, user namespacing, parameterised inserts, SELECT-only restrictions, blocked-keyword validation, current-table enforcement, LIMIT caps and read-only SQLite execution.</span></div>
+      <div class="mod"><b>CRAG — corrective RAG</b><span>Retrieve → grade → generate. A dedicated grader LLM labels each retrieved chunk correct, ambiguous or incorrect, and triggers live Tavily search when retrieval is too weak to answer from.</span></div>
+      <div class="mod"><b>ResearchMind</b><span>Search → reader → writer → critic → one bounded revision. Tavily handles search and extraction; the system builds structured notes, writes a cited report, critiques the draft, revises once when needed, and streams progress to the client.</span></div>
+      <div class="mod"><b>Email agent</b><span>Gmail API with OAuth2 and PKCE, LangGraph drafting with self-critique and revision, Chroma semantic inbox search. Sending and saving drafts are dangerous actions and require approval.</span></div>
+      <div class="mod"><b>Job tracker</b><span>LLM extraction of company, role and event type; company-name normalisation; fuzzy matching with <code>difflib</code> using role as a disambiguator; status derived from the event timeline; idempotent, resumable synchronisation.</span></div>
+    </div>
+
+    <h3>Important engineering decisions</h3>
+    <ul>
+      <li><strong>No embeddings for entity identity.</strong> The job tracker deliberately avoids vector similarity for
+      deciding whether two emails belong to the same application. Semantic closeness is not identity — “Senior Engineer
+      at Acme” and “Engineer at Acme Corp” can be near-identical vectors and different applications, or distant vectors
+      and the same one. Normalisation plus fuzzy matching plus role disambiguation is the right tool for that job.</li>
+      <li><strong>Safety at the database boundary, not in the prompt.</strong> The NL-to-SQL module assumes the model
+      will eventually be talked into writing something destructive, so the connection itself is read-only and the
+      identifiers are allowlisted. Prompt instructions are a preference; a read-only connection is a guarantee.</li>
+      <li><strong>Approval as graph state.</strong> Because approvals are checkpointed rather than held in memory, a
+      pending “send this email?” survives a restart instead of silently disappearing.</li>
+    </ul>
+
+    <h3>Tech stack</h3>
+    <p><strong>Backend:</strong> Python, FastAPI, Uvicorn, REST APIs, Pydantic<br>
+       <strong>AI &amp; agents:</strong> LangGraph, LangChain, MCP, FastMCP, Mistral, tool calling<br>
+       <strong>RAG:</strong> Corrective RAG, Chroma, embeddings, document ingestion, retrieval grading<br>
+       <strong>Data:</strong> SQLite, SQLAlchemy, structured data, SQL, validation<br>
+       <strong>External services:</strong> Tavily, Gmail API<br>
+       <strong>Frontend:</strong> Streamlit<br>
+       <strong>Security:</strong> JWT, bcrypt, OAuth2, PKCE, human approval gates</p>
+
+    <div class="case-links">
+      <a class="btnx primary" href="https://github.com/umerrafiq04/ai-platform" target="_blank" rel="noopener">GitHub</a>
+    </div>
+  </div>
+
+  <!-- 03 Climate -->
+  <div id="case-climate" data-title="Spatio-Temporal Climate Prediction using GNN + LSTM" data-cat="Machine Learning · Deep Learning · Research">
+    <h3>Goal</h3>
+    <p>Forecast multiple coupled climate variables twelve months ahead across a spatial grid, where every cell's future
+    depends on both its own history and on what its neighbours are doing.</p>
+
+    <h3>AI/ML approach</h3>
+    <p>Three stages. A graph convolutional encoder learns spatial structure across grid nodes; a GRU aggregates the
+    temporal window into a latent state; a continuous-time neural ODE evolves that state forward and the forecast is
+    read out from the integrated trajectory.</p>
+    <div class="flow" role="img" aria-label="Pipeline: climate grid, spatial graph, GCN encoder, GRU temporal aggregator, neural ODE, twelve-month forecast.">
+      <span class="node">Climate grid</span><span class="sep">→</span>
+      <span class="node">Spatial graph (8-connectivity)</span><span class="sep">→</span>
+      <span class="node">3-layer GCN encoder</span><span class="sep">→</span>
+      <span class="node">GRU aggregator</span><span class="sep">→</span>
+      <span class="node core">Neural ODE (RK4)</span><span class="sep">→</span>
+      <span class="node edge">12-month forecast</span>
+    </div>
+
+    <h3>Why a graph</h3>
+    <p>Climate grid cells are not independent samples. Modelling the domain as a graph with 8-connectivity lets spatial
+    dependence be learned rather than assumed away, and keeps the same model applicable to irregular domains.</p>
+
+    <h3>Why a neural ODE</h3>
+    <p>Monthly observations are discrete samples of a continuous process. A neural ODE parameterises the derivative of
+    the latent state and integrates it forward, so the forecast horizon becomes an integration bound rather than a
+    fixed number of unrolled steps.</p>
+
+    <h3>Technical implementation</h3>
+    <ul>
+      <li>Three-layer GCN encoder with LayerNorm and residual connections → GRU temporal aggregator → continuous-time neural ODE solved with RK4 via <code>torchdiffeq</code>; roughly 700K parameters</li>
+      <li>CRU TS reanalysis data: 122 years of monthly observations (1901–2022), 8 coupled climate variables</li>
+      <li>2,400-node graph over a 40×60 grid with 8-connectivity</li>
+      <li>24 months of input history mapped to a 12-month-ahead forecast</li>
+      <li>Custom asymmetric loss for precipitation skew: log1p transform plus a weighted under-prediction penalty</li>
+    </ul>
+
+    <h3>Results</h3>
+    <p>R² 0.83 and RMSE 14.20 on the 2,400-node configuration, evaluated against a GCN-GRU ablation baseline that
+    isolates how much of the performance comes from the neural ODE rather than the graph encoder alone. Per-variable
+    accuracy is highest on temperature and lowest on precipitation — the expected pattern given precipitation's skew
+    and variance.</p>
+
+    <h3>Tech stack</h3>
+    <p>Python · PyTorch · PyTorch Geometric · torchdiffeq · NumPy · xarray</p>
+
+    <div class="case-links">
+      <a class="btnx primary" href="https://github.com/umerrafiq04/spatio-temporal-climate-gnn-lstm" target="_blank" rel="noopener">GitHub</a>
+    </div>
+  </div>
+
+  <!-- Reach Out With AI -->
+  <div id="case-reach-out" data-title="Reach Out With AI" data-cat="GenAI · Recruiter workflows · Arclent">
+    <h3>Problem</h3>
+    <p>Recruiter outreach is either personalised and slow, or fast and obviously templated. Candidates ignore the
+    second kind, and fully automated sending gets it wrong in public.</p>
+
+    <h3>Solution</h3>
+    <p>An AI-powered outreach and candidate engagement system that drafts messages grounded in the specific candidate
+    and job context, puts every draft in front of a recruiter before it goes out, and classifies replies so the
+    workflow knows what to do next.</p>
+
+    <h3>How it works</h3>
+    <div class="flow" role="img" aria-label="Flow: candidate and job context, AI-generated outreach, recruiter review, send, response classification, next step.">
+      <span class="node">Candidate + job context</span><span class="sep">→</span>
+      <span class="node">AI-generated outreach</span><span class="sep">→</span>
+      <span class="node core">Recruiter review</span><span class="sep">→</span>
+      <span class="node">Send</span><span class="sep">→</span>
+      <span class="node">Response classification</span><span class="sep">→</span>
+      <span class="node edge">Next step</span>
+    </div>
+
+    <h3>Key features</h3>
+    <ul>
+      <li>Personalised message generation from candidate and role context rather than a fill-in-the-blanks template</li>
+      <li>Human-in-the-loop review — a recruiter approves or edits before anything is sent</li>
+      <li>Response classification to drive follow-up and candidate communication</li>
+      <li>Workflow automation around the repetitive parts of a recruiting pipeline</li>
+    </ul>
+
+    <h3>Tech stack</h3>
+    <p>Python · LLM-powered recruiting workflows · Human-in-the-loop review · Workflow automation · Railway</p>
+
+    <div class="case-links">
+      <a class="btnx primary" href="https://web-production-5173c.up.railway.app/" target="_blank" rel="noopener">Live demo</a>
+      <a class="btnx" href="https://github.com/umerrafiq04/reach-out-with-ai" target="_blank" rel="noopener">GitHub</a>
+    </div>
+  </div>
+
+  <!-- Company onboarding -->
+  <div id="case-onboarding" data-title="Arclent Automated Company Onboarding" data-cat="GenAI · Structured extraction · Arclent">
+    <h3>Problem</h3>
+    <p>Onboarding a company onto a recruiting platform means typing out details that already exist on the company's own
+    website. Handing that to a model naively produces two failures at once: a confidently invented company profile, and
+    a backend that will fetch any URL a user hands it.</p>
+
+    <h3>Solution</h3>
+    <p>A recruiter enters a company website URL. The backend researches that site — and public sources where necessary
+    — extracts and normalises the information with Mistral through a LangGraph pipeline, and returns a structured,
+    editable company profile for the recruiter to confirm before anything is stored.</p>
+
+    <h3>Pipeline</h3>
+    <div class="flow" role="img" aria-label="Pipeline: company URL, safe URL validation, website crawling, page discovery, HTML and metadata extraction, public-source enrichment, Mistral structured extraction, evidence consolidation, confidence assessment, editable profile, human confirmation, persistence.">
+      <span class="node">Company URL</span><span class="sep">→</span>
+      <span class="node">Safe URL validation</span><span class="sep">→</span>
+      <span class="node">Website crawling</span><span class="sep">→</span>
+      <span class="node">Page discovery</span><span class="sep">→</span>
+      <span class="node">HTML / metadata extraction</span><span class="sep">→</span>
+      <span class="node">Public-source enrichment</span><span class="sep">→</span>
+      <span class="node core">Mistral structured extraction</span><span class="sep">→</span>
+      <span class="node">Evidence consolidation</span><span class="sep">→</span>
+      <span class="node">Confidence assessment</span><span class="sep">→</span>
+      <span class="node">Editable profile</span><span class="sep">→</span>
+      <span class="node edge">Human confirmation → persistence</span>
+    </div>
+
+    <h3>Engineering problems solved</h3>
+    <ul>
+      <li><strong>Grounding.</strong> Extracted fields are tied back to the evidence that produced them and carry a
+      confidence assessment, so a recruiter can see what was actually found versus what was thin — rather than
+      receiving a uniform-looking profile where half the fields were guessed.</li>
+      <li><strong>SSRF.</strong> A backend that fetches user-supplied URLs is an SSRF vector by default. This one
+      validates URLs and redirect targets, blocks unsafe destinations, and caps requests, response sizes, crawl depth
+      and total pages.</li>
+      <li><strong>Streaming.</strong> Crawling takes time, so progress is streamed to the client with NDJSON instead of
+      leaving the recruiter on a spinner.</li>
+    </ul>
+
+    <h3>Tech stack</h3>
+    <p>Python · FastAPI · LangGraph · LangChain · Mistral · Web crawling · HTML parsing · Metadata extraction ·
+    Structured extraction · Data normalisation · SQLite · REST APIs · NDJSON streaming · SSRF protection</p>
+
+    <div class="case-links">
+      <a class="btnx primary" href="https://github.com/umerrafiq04/arclent-company-onboarding" target="_blank" rel="noopener">GitHub</a>
+    </div>
+  </div>
+
+  <!-- DPR -->
+  <div id="case-dpr" data-title="AI-Based DPR Evaluation System" data-cat="RAG · Document AI">
+    <h3>Problem</h3>
+    <p>Detailed Project Reports have to be checked against guidelines, and the check has to be defensible — a reviewer
+    needs to know which page a finding came from and which rule it violated. A summary from a language model is neither
+    auditable nor reliable enough for that.</p>
+
+    <h3>Solution</h3>
+    <p>A working MVP that ingests DPR PDFs, extracts and cleans the text with OCR fallback for scanned pages, and
+    evaluates the content against a local guideline knowledge base — producing an explainable, page-referenced
+    compliance and risk report.</p>
+
+    <h3>The important distinction</h3>
+    <p>This is deliberately <strong>not</strong> PDF → LLM → summary. It is a hybrid pipeline where deterministic rule
+    checks and retrieval do most of the work, and the LLM is invoked only where genuine reasoning is required. Risk
+    scoring is deterministic, so the same document produces the same score twice.</p>
+    <div class="flow" role="img" aria-label="Pipeline: DPR PDF, text extraction with OCR fallback, guideline knowledge base retrieval, deterministic rule checks, LLM reasoning where needed, schema validation, page-referenced report.">
+      <span class="node">DPR PDF</span><span class="sep">→</span>
+      <span class="node">Extraction + OCR fallback</span><span class="sep">→</span>
+      <span class="node">Guideline KB retrieval (RAG)</span><span class="sep">→</span>
+      <span class="node core">Deterministic rule checks</span><span class="sep">→</span>
+      <span class="node">LLM reasoning where needed</span><span class="sep">→</span>
+      <span class="node">Schema validation</span><span class="sep">→</span>
+      <span class="node edge">Page-referenced report</span>
+    </div>
+
+    <h3>Key features</h3>
+    <ul>
+      <li>PDF ingestion with text extraction, cleaning and OCR fallback for scanned pages</li>
+      <li>Retrieval against a local guideline knowledge base</li>
+      <li>Deterministic rule checks alongside LLM reasoning</li>
+      <li>Schema validation on structured outputs</li>
+      <li>Explainable findings with page references and deterministic risk scoring</li>
+      <li>LangGraph orchestration across the whole pipeline</li>
+    </ul>
+
+    <h3>Tech stack</h3>
+    <p>Python · LangGraph · RAG · PDF extraction · OCR · Deterministic rules · Schema validation</p>
+
+    <div class="case-links">
+      <a class="btnx primary" href="https://github.com/umerrafiq04/dpr-evaluation-system" target="_blank" rel="noopener">GitHub</a>
+    </div>
+  </div>
+
+  <!-- GraphNODE Kashmir -->
+  <div id="case-graphnode-kashmir" data-title="GraphNODE Precipitation Forecasting for Kashmir" data-cat="Machine Learning · B.Tech capstone">
+    <h3>Goal</h3>
+    <p>Forecast climate variables twelve months ahead across a 126-node Kashmir domain, and answer a question the
+    architecture alone can't: does the way you build the graph actually matter?</p>
+
+    <h3>Approach</h3>
+    <p>A GCN-ODE (GraphNODE) model — a graph convolutional encoder feeding a continuous-time neural ODE — trained
+    across an ablation grid that varies both the domain and the edge construction.</p>
+
+    <h3>The ablation</h3>
+    <ul>
+      <li><strong>Domain:</strong> a wide South Asia grid against the Kashmir-only 126-node domain, including slicing
+      the wide-domain weights down to the Kashmir nodes to separate transfer from retraining.</li>
+      <li><strong>Graph construction:</strong> geographic edges only, against a hybrid graph adding top-k
+      correlation-based teleconnection edges — testing whether statistically linked but geographically distant nodes
+      carry signal that adjacency misses.</li>
+      <li><strong>Training variants:</strong> hidden size, epoch count, per-node normalisation, distance-weighted
+      edges, DropEdge, finer ODE integration and learning-rate warmup.</li>
+    </ul>
+
+    <h3>What the comparison is for</h3>
+    <p>Precipitation is the hardest variable in the set — skewed, high-variance, and the one a forecast is most often
+    wanted for. Running geographic and hybrid variants under matched training settings is what makes any difference
+    between them attributable to the graph rather than to the optimiser.</p>
+
+    <h3>Context</h3>
+    <p>B.Tech capstone at the University of Kashmir, supervised by Er. Khalid Hussain, with two teammates.</p>
+
+    <h3>Tech stack</h3>
+    <p>Python · PyTorch · PyTorch Geometric · torchdiffeq · Graph construction · Neural ODE · Time-series forecasting</p>
+  </div>
+
+  <!-- MCP client -->
+  <div id="case-mcp-client" data-title="MCP Multi-Server AI Client" data-cat="Agentic AI · MCP">
+    <h3>Goal</h3>
+    <p>Give an LLM access to tools that live in different places, without hard-wiring each integration into the
+    application.</p>
+
+    <h3>Solution</h3>
+    <p>A multi-server architecture that connects LLMs to external tools and services through the Model Context
+    Protocol. Tool servers stay independent processes with their own concerns; the client discovers what each one
+    offers and routes calls to the right server.</p>
+
+    <h3>Why it matters</h3>
+    <p>MCP turns an integration problem into a protocol problem. Adding a capability means standing up a server that
+    speaks MCP, not editing the agent — which is the difference between a demo and something you can keep extending.</p>
+
+    <h3>Tech stack</h3>
+    <p>Python · MCP · FastAPI · LangGraph · LLM APIs</p>
+
+    <div class="case-links">
+      <a class="btnx primary" href="https://github.com/umerrafiq04/MCP_CLIENT" target="_blank" rel="noopener">GitHub</a>
+    </div>
+  </div>
+
+  <!-- CRAG -->
+  <div id="case-crag" data-title="Corrective RAG" data-cat="RAG · Retrieval">
+    <h3>Problem</h3>
+    <p>Standard RAG answers from whatever the retriever returns, whether or not it's relevant. Bad retrieval doesn't
+    produce a refusal — it produces a fluent, wrong answer.</p>
+
+    <h3>Solution</h3>
+    <p>A retrieval workflow that evaluates its own evidence before generating. Retrieved chunks are graded, and when
+    the context isn't good enough to answer from, the workflow goes looking for better sources instead of proceeding.</p>
+
+    <h3>How it works</h3>
+    <div class="flow" role="img" aria-label="Flow: query, retrieve, grade evidence, then either generate or fetch better sources and generate.">
+      <span class="node">Query</span><span class="sep">→</span>
+      <span class="node">Retrieve</span><span class="sep">→</span>
+      <span class="node core">Grade evidence</span><span class="sep">→</span>
+      <span class="node">Good enough? Generate</span><span class="sep">/</span>
+      <span class="node edge">Too weak? Find better sources</span>
+    </div>
+
+    <h3>Key ideas</h3>
+    <ul>
+      <li>Retrieval grading as an explicit step rather than an assumption</li>
+      <li>Adaptive retrieval — the path through the graph depends on evidence quality</li>
+      <li>Grounded generation, so the answer traces back to what was actually retrieved</li>
+    </ul>
+
+    <h3>Tech stack</h3>
+    <p>Python · LangGraph · RAG · LLMs · Vector retrieval</p>
+
+    <div class="case-links">
+      <a class="btnx primary" href="https://github.com/umerrafiq04/CORRECTIVE_RAG" target="_blank" rel="noopener">GitHub</a>
+    </div>
+  </div>
+
+  <!-- Self-RAG -->
+  <div id="case-self-rag" data-title="Self-RAG" data-cat="RAG · Retrieval">
+    <h3>Problem</h3>
+    <p>Not every question needs retrieval, and not every generated answer is supported by the documents that were
+    retrieved for it. A pipeline that always retrieves and never checks itself gets both cases wrong.</p>
+
+    <h3>Solution</h3>
+    <p>A self-evaluating retrieval and generation workflow. The model reflects on whether retrieval is warranted, and
+    on whether its own output is actually grounded in the evidence, before the answer is returned.</p>
+
+    <h3>Key ideas</h3>
+    <ul>
+      <li>Self-reflection as part of the generation loop, not a post-hoc filter</li>
+      <li>Retrieval decided per query rather than applied unconditionally</li>
+      <li>More dependable LLM responses through explicit self-assessment</li>
+    </ul>
+
+    <h3>Tech stack</h3>
+    <p>Python · Self-RAG · RAG · NLP · LLMs</p>
+
+    <div class="case-links">
+      <a class="btnx primary" href="https://github.com/umerrafiq04/SELF_RAG" target="_blank" rel="noopener">GitHub</a>
+    </div>
+  </div>
+
+  <!-- Job assistant -->
+  <div id="case-job-assistant" data-title="AI Job Application Assistant" data-cat="GenAI · Automation">
+    <h3>Goal</h3>
+    <p>Job searching is mostly repetition — the same details re-entered, the same materials re-tailored, the same
+    tracking done by hand. That's work an agent can carry.</p>
+
+    <h3>Solution</h3>
+    <p>An AI-assisted workflow that streamlines job-search and application tasks through intelligent automation, so the
+    candidate spends their time on the parts that need judgement.</p>
+
+    <h3>Key ideas</h3>
+    <ul>
+      <li>Agent-driven automation of repetitive application steps</li>
+      <li>AI assistance applied to search and application workflows</li>
+      <li>Python automation tying the steps into one pipeline</li>
+    </ul>
+
+    <h3>Tech stack</h3>
+    <p>Python · AI agents · Automation · LLM APIs</p>
+
+    <div class="case-links">
+      <a class="btnx primary" href="https://github.com/umerrafiq04/AI-Job-Application-Assistantt" target="_blank" rel="noopener">GitHub</a>
+    </div>
+  </div>
+
+  <!-- Chatbot -->
+  <div id="case-chatbot" data-title="AI Conversational Chatbot with LangGraph + Mistral" data-cat="GenAI · LLM applications">
+    <h3>Goal</h3>
+    <p>Build a conversation that holds its shape across several turns, instead of a single prompt loop that forgets
+    where it is in the exchange.</p>
+
+    <h3>Solution</h3>
+    <p>A conversational system built around LangGraph and Mistral, where the dialogue is modelled as explicit state and
+    transitions. Structured multi-step interaction becomes a property of the graph rather than something the prompt has
+    to keep re-establishing.</p>
+
+    <h3>Key ideas</h3>
+    <ul>
+      <li>LangGraph state machine driving the conversation flow</li>
+      <li>Multi-step structured interaction with explicit transitions</li>
+      <li>Mistral as the underlying language model</li>
+    </ul>
+
+    <h3>Tech stack</h3>
+    <p>Python · LangGraph · Mistral · LLM APIs</p>
+
+    <div class="case-links">
+      <a class="btnx primary" href="https://github.com/umerrafiq04/AI-Conversational-Chatbot-with-LangGraph-Mistral" target="_blank" rel="noopener">GitHub</a>
+    </div>
+  </div>
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+(function () {
+  'use strict';
+
+  /* ---------- scroll reveal ---------- */
+  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var reveals = document.querySelectorAll('.reveal');
+  if (reduce || !('IntersectionObserver' in window)) {
+    reveals.forEach(function (el) { el.classList.add('show'); });
+  } else {
+    var obs = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (e.isIntersecting) { e.target.classList.add('show'); obs.unobserve(e.target); }
+      });
+    }, { threshold: 0.1 });
+    reveals.forEach(function (el) { obs.observe(el); });
+  }
+
+  /* ---------- project filtering ---------- */
+  var chips = document.querySelectorAll('.chip');
+  var cards = document.querySelectorAll('.pcard');
+  var status = document.getElementById('filter-status');
+
+  function applyFilter(key) {
+    var shown = 0;
+    cards.forEach(function (card) {
+      var cats = (card.getAttribute('data-cat') || '').split(' ');
+      var match = (key === 'all') || cats.indexOf(key) !== -1;
+      card.classList.toggle('is-hidden', !match);
+      if (match) shown++;
+    });
+    if (status) status.textContent = shown + (shown === 1 ? ' project' : ' projects') + ' shown';
+  }
+
+  chips.forEach(function (chip) {
+    chip.addEventListener('click', function () {
+      chips.forEach(function (c) { c.setAttribute('aria-pressed', 'false'); });
+      chip.setAttribute('aria-pressed', 'true');
+      applyFilter(chip.getAttribute('data-filter'));
+    });
+  });
+  applyFilter('all');
+
+  /* ---------- case study dialog ---------- */
+  var dlg = document.getElementById('case');
+  var dlgTitle = document.getElementById('case-title');
+  var dlgCat = document.getElementById('case-cat');
+  var dlgBody = document.getElementById('case-body');
+  var closeBtn = document.getElementById('case-close');
+  var lastTrigger = null;
+  var supportsModal = dlg && typeof dlg.showModal === 'function';
+
+  function openCase(id, trigger) {
+    var src = document.getElementById('case-' + id);
+    if (!src) return;
+    lastTrigger = trigger || null;
+    dlgTitle.textContent = src.getAttribute('data-title') || '';
+    dlgCat.textContent = src.getAttribute('data-cat') || '';
+    dlgBody.innerHTML = src.innerHTML;
+    dlgBody.scrollTop = 0;
+
+    if (supportsModal) {
+      dlg.showModal();
+    } else {
+      dlg.setAttribute('open', '');
+    }
+    document.body.classList.add('locked');
+    dlgBody.focus();
+  }
+
+  function closeCase() {
+    if (supportsModal && dlg.open) { dlg.close(); }
+    else { dlg.removeAttribute('open'); }
+  }
+
+  document.querySelectorAll('[data-case]').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      openCase(btn.getAttribute('data-case'), btn);
+    });
+  });
+
+  closeBtn.addEventListener('click', closeCase);
+
+  // click on the backdrop closes
+  dlg.addEventListener('click', function (e) {
+    if (e.target === dlg) closeCase();
+  });
+
+  dlg.addEventListener('close', function () {
+    document.body.classList.remove('locked');
+    if (lastTrigger) { lastTrigger.focus(); lastTrigger = null; }
+  });
+
+  // Escape for the no-<dialog> fallback path
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape' && !supportsModal && dlg.hasAttribute('open')) {
+      dlg.removeAttribute('open');
+      document.body.classList.remove('locked');
+      if (lastTrigger) { lastTrigger.focus(); lastTrigger = null; }
+    }
+  });
+
+  /* ---------- close mobile nav after choosing a link ---------- */
+  var navEl = document.getElementById('nav');
+  document.querySelectorAll('#nav .nav-link').forEach(function (link) {
+    link.addEventListener('click', function () {
+      if (navEl.classList.contains('show')) {
+        var inst = bootstrap.Collapse.getInstance(navEl) || new bootstrap.Collapse(navEl, { toggle: false });
+        inst.hide();
+      }
+    });
+  });
+})();
+</script>
+
+<!-- ================= INTERSTELLAR BACKGROUND + PAGE INTERACTIONS ================= -->
+<script>
+(function () {
+  'use strict';
+
+  var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var lite = window.matchMedia('(pointer: coarse)').matches || window.innerWidth < 820;
+
+  /* ==================================================================
+     1. SCROLL PROGRESS
+  ================================================================== */
+  var bar = document.getElementById('progress');
+  var scrollN = 0;
+  function onScroll() {
+    var max = document.documentElement.scrollHeight - window.innerHeight;
+    scrollN = max > 0 ? Math.min(1, window.scrollY / max) : 0;
+    if (bar) bar.style.width = (scrollN * 100).toFixed(2) + '%';
+  }
+  window.addEventListener('scroll', onScroll, { passive: true });
+  window.addEventListener('resize', onScroll, { passive: true });
+  onScroll();
+
+  /* ==================================================================
+     2. CARD TILT — cards lean toward the cursor in 3D
+  ================================================================== */
+  if (!reduceMotion && !lite) {
+    document.querySelectorAll('.pcard-inner').forEach(function (card) {
+      card.addEventListener('pointermove', function (e) {
+        var r = card.getBoundingClientRect();
+        var px = (e.clientX - r.left) / r.width - 0.5;
+        var py = (e.clientY - r.top) / r.height - 0.5;
+        card.style.transform =
+          'translateY(-5px) rotateX(' + (-py * 6).toFixed(2) + 'deg) rotateY(' +
+          (px * 8).toFixed(2) + 'deg)';
+      });
+      card.addEventListener('pointerleave', function () { card.style.transform = ''; });
+    });
+  }
+
+  /* ==================================================================
+     3. BLACK HOLE — one fullscreen fragment shader, raw WebGL, no deps
+  ================================================================== */
+  var canvas = document.getElementById('space-canvas');
+  if (!canvas) return;
+
+  var gl = null;
+  try {
+    gl = canvas.getContext('webgl', { alpha: true, antialias: false, depth: false, stencil: false }) ||
+         canvas.getContext('experimental-webgl', { alpha: true, antialias: false, depth: false });
+  } catch (e) { gl = null; }
+  if (!gl) { canvas.style.display = 'none'; return; }
+
+  var VERT = [
+    'attribute vec2 aPos;',
+    'void main(){ gl_Position = vec4(aPos, 0.0, 1.0); }'
+  ].join('\n');
+
+  var FRAG = [
+    'precision highp float;',
+    'uniform vec2  uRes;',
+    'uniform float uTime;',
+    'uniform vec2  uMouse;',   // smoothed, roughly -1..1
+    'uniform float uScroll;',  // 0..1 down the page
+    'uniform float uBoost;',   // rises while hovering something interactive
+
+    'float hash21(vec2 p){',
+    '  p = fract(p * vec2(123.34, 456.21));',
+    '  p += dot(p, p + 45.32);',
+    '  return fract(p.x * p.y);',
+    '}',
+
+    // sparse procedural stars, three layers at different scales
+    'vec3 starLayer(vec2 uv, float scale, float bright, float seed){',
+    '  vec2 g = uv * scale + seed;',
+    '  vec2 id = floor(g);',
+    '  vec2 f  = fract(g) - 0.5;',
+    '  vec3 col = vec3(0.0);',
+    '  for(int y = -1; y <= 1; y++){',
+    '    for(int x = -1; x <= 1; x++){',
+    '      vec2 o = vec2(float(x), float(y));',
+    '      float h = hash21(id + o + seed);',
+    '      if(h < 0.90) continue;',
+    '      vec2 pos = o + vec2(hash21(id+o+7.1), hash21(id+o+13.7)) - 0.5;',
+    '      float d = length(f - pos);',
+    '      float s = bright * 0.0016 / (d*d + 0.0004);',
+    '      float tw = 0.72 + 0.28 * sin(uTime * 1.4 + h * 40.0);',
+    '      vec3 tint = mix(vec3(0.72,0.85,1.0), vec3(1.0,0.90,0.76), hash21(id+o+3.3));',
+    '      col += s * tw * tint;',
+    '    }',
+    '  }',
+    '  return col;',
+    '}',
+
+    'void main(){',
+    '  vec2 uv = (gl_FragCoord.xy - 0.5 * uRes) / uRes.y;',
+
+    // the hole drifts a little with the cursor and rises as you scroll
+    '  vec2 centre = uMouse * 0.06 + vec2(0.42, -0.11 + uScroll * 0.17);',
+    '  vec2 p = uv - centre;',
+    '  float r = max(length(p), 1e-4);',
+
+    '  float rs = 0.088;',                                   // event horizon
+
+    // gravitational lensing: push samples outward and swirl them around
+    '  float bend  = 0.030 / (r*r + 0.010);',
+    '  float swirl = 0.55 / (r + 0.14) + uTime * 0.010;',
+    '  float ca = cos(swirl), sa = sin(swirl);',
+    '  vec2 sp = mat2(ca, -sa, sa, ca) * p * (1.0 + bend);',
+
+    '  vec3 col = vec3(0.0);',
+    '  col += starLayer(sp,  7.0, 1.00,  0.0);',
+    '  col += starLayer(sp, 13.0, 0.55, 21.7);',
+    '  col += starLayer(sp, 24.0, 0.28, 51.3);',
+
+    // accretion disk seen nearly edge-on; opens up slightly as you scroll
+    '  float tilt = mix(0.13, 0.26, clamp(uScroll, 0.0, 1.0));',
+    '  vec2 de = vec2(p.x, p.y / tilt);',
+    '  float rd = length(de);',
+    '  float band = smoothstep(0.17, 0.22, rd) * (1.0 - smoothstep(0.34, 0.52, rd));',
+    '  float aa = atan(de.y, de.x);',
+    '  float striae = 0.70 + 0.30 * sin(aa * 3.0 - uTime * 0.5 + rd * 9.0);',
+    '  float doppler = mix(0.42, 1.35, smoothstep(0.55, -0.55, p.x));',   // relativistic beaming
+    '  vec3 hot = mix(vec3(1.0,0.88,0.66), vec3(1.0,0.45,0.13), smoothstep(0.17, 0.52, rd));',
+    '  col += hot * band * striae * doppler * 0.42;',
+
+    // the far side of the disk, lensed up over the top and under the bottom
+    '  float arc = smoothstep(0.126, 0.146, r) * (1.0 - smoothstep(0.168, 0.228, r));',
+    '  arc *= smoothstep(0.015, 0.150, abs(p.y));',
+    '  col += vec3(1.0, 0.72, 0.38) * arc * 1.25;',
+
+    // photon ring + halo
+    '  float pr = 1.0 - smoothstep(0.0, 0.016, abs(r - rs * 1.30));',
+    '  col += vec3(1.0, 0.84, 0.58) * pr * 0.85;',
+    '  col += vec3(1.0, 0.58, 0.24) * 0.055 / (r * r * 40.0 + 1.0);',
+
+    // event horizon swallows everything
+    '  col *= smoothstep(rs, rs * 1.07, r);',
+
+    '  col *= 0.88 + uBoost * 0.30;',
+    '  col *= 1.0 - 0.32 * smoothstep(0.45, 1.25, length(uv));',   // vignette, keeps text legible
+    '  gl_FragColor = vec4(col, 1.0);',
+    '}'
+  ].join('\n');
+
+  function compile(type, src) {
+    var s = gl.createShader(type);
+    gl.shaderSource(s, src);
+    gl.compileShader(s);
+    if (!gl.getShaderParameter(s, gl.COMPILE_STATUS)) {
+      console.warn('shader:', gl.getShaderInfoLog(s));
+      return null;
+    }
+    return s;
+  }
+  var vs = compile(gl.VERTEX_SHADER, VERT);
+  var fs = compile(gl.FRAGMENT_SHADER, FRAG);
+  if (!vs || !fs) { canvas.style.display = 'none'; return; }
+
+  var prog = gl.createProgram();
+  gl.attachShader(prog, vs); gl.attachShader(prog, fs); gl.linkProgram(prog);
+  if (!gl.getProgramParameter(prog, gl.LINK_STATUS)) { canvas.style.display = 'none'; return; }
+  gl.useProgram(prog);
+
+  var buf = gl.createBuffer();
+  gl.bindBuffer(gl.ARRAY_BUFFER, buf);
+  gl.bufferData(gl.ARRAY_BUFFER, new Float32Array([-1,-1, 3,-1, -1,3]), gl.STATIC_DRAW);
+  var aPos = gl.getAttribLocation(prog, 'aPos');
+  gl.enableVertexAttribArray(aPos);
+  gl.vertexAttribPointer(aPos, 2, gl.FLOAT, false, 0, 0);
+
+  var uRes    = gl.getUniformLocation(prog, 'uRes');
+  var uTime   = gl.getUniformLocation(prog, 'uTime');
+  var uMouse  = gl.getUniformLocation(prog, 'uMouse');
+  var uScroll = gl.getUniformLocation(prog, 'uScroll');
+  var uBoost  = gl.getUniformLocation(prog, 'uBoost');
+
+  var dpr = Math.min(window.devicePixelRatio || 1, lite ? 1.0 : 1.5);
+  function resize() {
+    var w = Math.round(window.innerWidth * dpr);
+    var h = Math.round(window.innerHeight * dpr);
+    if (canvas.width !== w || canvas.height !== h) {
+      canvas.width = w; canvas.height = h;
+      gl.viewport(0, 0, w, h);
+    }
+    gl.uniform2f(uRes, w, h);
+  }
+  window.addEventListener('resize', resize, { passive: true });
+  resize();
+
+  /* ---- input ---- */
+  var mx = 0, my = 0, tx = 0, ty = 0;
+  var boost = 0, boostGoal = 0;
+  var HOVER = '.pcard-inner, .btnx, .chip, .nav-link, a[href]';
+
+  window.addEventListener('pointermove', function (e) {
+    tx = (e.clientX / window.innerWidth) * 2 - 1;
+    ty = -((e.clientY / window.innerHeight) * 2 - 1);
+    var el = e.target && e.target.closest ? e.target.closest(HOVER) : null;
+    boostGoal = el ? 1 : 0;
+  }, { passive: true });
+  window.addEventListener('blur', function () { boostGoal = 0; });
+
+  /* ---- loop ---- */
+  var start = performance.now();
+  var raf = 0;
+  var scrollSmooth = 0;
+
+  function frame() {
+    raf = requestAnimationFrame(frame);
+    if (document.hidden) return;
+    if (document.body.classList.contains('locked')) return;   // a case-study modal is open
+
+    mx += (tx - mx) * 0.045;                                  // slow, weighty drift
+    my += (ty - my) * 0.045;
+    boost += (boostGoal - boost) * 0.08;
+    scrollSmooth += (scrollN - scrollSmooth) * 0.08;
+
+    gl.uniform1f(uTime, (performance.now() - start) / 1000);
+    gl.uniform2f(uMouse, mx, my);
+    gl.uniform1f(uScroll, scrollSmooth);
+    gl.uniform1f(uBoost, boost);
+    gl.drawArrays(gl.TRIANGLES, 0, 3);
+  }
+
+  if (reduceMotion) {
+    gl.uniform1f(uTime, 0);
+    gl.uniform2f(uMouse, 0, 0);
+    gl.uniform1f(uScroll, 0);
+    gl.uniform1f(uBoost, 0);
+    gl.drawArrays(gl.TRIANGLES, 0, 3);
+  } else {
+    frame();
+  }
+
+  requestAnimationFrame(function () { canvas.classList.add('lit'); });
+
+  window.addEventListener('pagehide', function () {
+    if (raf) cancelAnimationFrame(raf);
+  });
+})();
+</script>
+</body>
+</html>
