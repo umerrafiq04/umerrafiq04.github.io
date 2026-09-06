@@ -112,6 +112,13 @@ section{padding:92px 0}
 .btnx.primary:hover{color:#06111c;filter:brightness(1.06)}
 .btnx.sm{padding:8px 14px;font-size:.87rem;border-radius:10px}
 .actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:26px}
+.scroll-cue{display:none;position:absolute;left:0;right:0;bottom:20px;
+  align-items:center;justify-content:center;gap:7px;color:var(--dim);
+  font-size:.78rem;letter-spacing:.04em;text-decoration:none}
+.scroll-cue:hover{color:var(--a)}
+.scroll-cue .chev{display:inline-block;animation:bob 2.1s ease-in-out infinite}
+@keyframes bob{0%,100%{transform:translateY(0)}50%{transform:translateY(5px)}}
+
 .card-actions{display:flex;flex-wrap:wrap;gap:9px;margin-top:auto;padding-top:16px}
 
 /* ---------- hero ---------- */
@@ -232,22 +239,70 @@ footer{border-top:1px solid var(--line);padding:26px 0;color:var(--dim);font-siz
 
 /* ---------- responsive ---------- */
 @media(max-width:991px){
-  .hero-grid{grid-template-columns:1fr;gap:36px}
+  /* stacked layout: the intro fills exactly one viewport, so "What I work on"
+     starts below the fold and is revealed by scrolling */
+  .hero-grid{grid-template-columns:1fr;gap:0}
   .spec{max-width:640px}
+  .hero{padding:0 0 64px;min-height:auto}
+  .hero-lede{
+    min-height:100vh;min-height:100svh;
+    display:flex;flex-direction:column;justify-content:space-between;
+    padding:92px 0 80px;position:relative;
+  }
+  .hero-lede .status{align-self:flex-start}
+  .hero-lede .hero-mid{display:flex;flex-direction:column;justify-content:center;flex:1 1 auto}
+  .hero-lede .lead{max-width:none}
+  .hero-lede .actions{margin-top:0}
+  .scroll-cue{display:flex}
 }
+.hide-sm{display:inline}
+.only-sm{display:none}
+
 @media(max-width:700px){
-  section{padding:66px 0}
-  .hero{padding-top:112px;min-height:auto}
+  section{padding:60px 0}
+  .hide-sm{display:none}
+  .only-sm{display:inline}
+
+  /* hero is sized to land complete on one phone screen:
+     badge + headline + lead + all four CTAs above the fold */
+  .hero-lede{padding:88px 0 78px}
+  .status{font-size:.72rem;padding:6px 11px;line-height:1.35}
+  .hero h1{font-size:clamp(1.95rem,8.4vw,2.6rem);line-height:1.08;margin:0 0 14px;letter-spacing:-.03em}
+  .hero .lead{font-size:.95rem;line-height:1.6;margin:0}
+  .hero .actions{gap:8px;margin-top:16px}
+  .hero .actions .btnx{flex:1 1 calc(50% - 4px);justify-content:center;padding:11px 8px;font-size:.85rem}
+  .spec{padding:20px}
+  .spec h3{font-size:1.05rem}
+  .spec p{font-size:.88rem}
+
+  .section-title{font-size:clamp(1.5rem,6vw,2rem)}
+  .sub{font-size:.92rem}
   .orb{filter:blur(28px)}
-  .o1{width:220px;height:220px}
-  .o2{width:180px;height:180px}
+  .o1{width:200px;height:200px}
+  .o2{width:160px;height:160px}
   .btnx{padding:10px 14px;font-size:.88rem}
   .metric{font-size:.86rem}
+
+  /* touch feedback in place of the desktop cursor tilt */
+  .pcard-inner:active{transform:translateY(-3px) scale(.99);border-color:rgba(98,216,255,.45)}
+  .chip:active,.btnx:active{transform:scale(.97)}
   #case{width:100vw;max-width:100vw;max-height:100vh;height:100vh;border-radius:0;border:0}
   .case-shell{max-height:100vh;height:100vh}
   .case-head{padding:18px 18px 15px}
   .case-body{padding:20px 18px 34px}
   .case-links .btnx{flex:1 1 auto;justify-content:center}
+}
+@media(max-width:420px){
+  .hero-lede{padding:82px 0 74px}
+  .hero h1{font-size:1.82rem;margin:0 0 12px}
+  .hero .lead{font-size:.9rem}
+  .status{font-size:.68rem;padding:5px 10px}
+  .hero .actions .btnx{padding:10px 6px;font-size:.8rem}
+}
+@media(max-height:680px) and (max-width:700px){
+  .hero-lede{padding:74px 0 68px}
+  .hero h1{font-size:1.68rem;margin:0 0 10px}
+  .hero .lead{font-size:.87rem}
 }
 </style>
 </head>
@@ -287,21 +342,25 @@ footer{border-top:1px solid var(--line);padding:26px 0;color:var(--dim);font-siz
   <span class="orb o3" aria-hidden="true"></span>
   <div class="container">
     <div class="hero-grid">
-      <div>
-        <span class="status"><span class="dot" aria-hidden="true"></span> AI Engineer · Open to opportunities</span>
+      <div class="hero-lede">
+        <span class="status"><span class="dot" aria-hidden="true"></span> Open to AI, ML, GenAI, Data Science &amp; Data Analyst roles</span>
+        <div class="hero-mid">
         <h1 id="hero-title">AI Engineer building intelligent, production-oriented systems.</h1>
         <p class="lead">
           I'm Umer Rafiq, a <strong>computer science engineer</strong> working across generative AI, LLM and agentic
-          systems. I build the full engineering system around AI — LangGraph agents and tool calling, retrieval
-          pipelines with grading and grounding, FastAPI backends and REST APIs, SQL and data workflows, deep learning
-          models, and the guardrails, auth and deployment that hold it together.
+          systems. I build the full engineering system around AI — <span class="hide-sm">LangGraph agents and tool
+          calling, retrieval pipelines with grading and grounding, FastAPI backends and REST APIs, SQL and data
+          workflows, deep learning models, and the guardrails, auth and deployment that hold it
+          together.</span><span class="only-sm">agents, retrieval, APIs, data pipelines and deployment.</span>
         </p>
+        </div>
         <div class="actions">
           <a class="btnx primary" href="#featured">View projects</a>
           <a class="btnx" href="https://github.com/umerrafiq04" target="_blank" rel="noopener">GitHub</a>
           <a class="btnx" href="#contact">Contact me</a>
           <a class="btnx" href="https://drive.google.com/file/d/1PP9eSLAwM7gZqpwdbWBBq1lD9gpkBHV-/view?usp=drive_link" target="_blank" rel="noopener">Resume</a>
         </div>
+        <a class="scroll-cue" href="#about">What I work on <span class="chev" aria-hidden="true">&darr;</span></a>
       </div>
 
       <aside class="glass spec" aria-label="Profile summary">
@@ -1497,7 +1556,7 @@ footer{border-top:1px solid var(--line);padding:26px 0;color:var(--dim);font-siz
     '  vec2 uv = (gl_FragCoord.xy - 0.5 * uRes) / uRes.y;',
 
     // the hole drifts a little with the cursor and rises as you scroll
-    '  vec2 centre = uMouse * 0.06 + vec2(0.42, -0.11 + uScroll * 0.17);',
+    '  vec2 centre = uMouse * 0.075 + vec2(0.42, -0.11 + uScroll * 0.22);',
     '  vec2 p = uv - centre;',
     '  float r = max(length(p), 1e-4);',
 
@@ -1594,6 +1653,8 @@ footer{border-top:1px solid var(--line);padding:26px 0;color:var(--dim);font-siz
   var boost = 0, boostGoal = 0;
   var HOVER = '.pcard-inner, .btnx, .chip, .nav-link, a[href]';
 
+  var touching = false, pulse = 0;
+
   window.addEventListener('pointermove', function (e) {
     tx = (e.clientX / window.innerWidth) * 2 - 1;
     ty = -((e.clientY / window.innerHeight) * 2 - 1);
@@ -1601,6 +1662,15 @@ footer{border-top:1px solid var(--line);padding:26px 0;color:var(--dim);font-siz
     boostGoal = el ? 1 : 0;
   }, { passive: true });
   window.addEventListener('blur', function () { boostGoal = 0; });
+
+  // On touch devices there is no hover, so the page drives the scene instead:
+  // dragging steers the hole, tapping sends a pulse through it, and when nothing
+  // is happening it keeps drifting on its own so it never looks frozen.
+  if (lite) {
+    window.addEventListener('touchstart', function () { touching = true; pulse = 1; }, { passive: true });
+    window.addEventListener('touchend', function () { touching = false; }, { passive: true });
+    window.addEventListener('touchcancel', function () { touching = false; }, { passive: true });
+  }
 
   /* ---- loop ---- */
   var start = performance.now();
@@ -1612,12 +1682,22 @@ footer{border-top:1px solid var(--line);padding:26px 0;color:var(--dim);font-siz
     if (document.hidden) return;
     if (document.body.classList.contains('locked')) return;   // a case-study modal is open
 
-    mx += (tx - mx) * 0.045;                                  // slow, weighty drift
-    my += (ty - my) * 0.045;
+    var now = (performance.now() - start) / 1000;
+
+    if (lite && !touching) {
+      // slow autonomous orbit, nudged by how far down the page you are
+      tx = Math.sin(now * 0.19) * 0.8 + (scrollN - 0.5) * 0.7;
+      ty = Math.cos(now * 0.13) * 0.6;
+    }
+
+    mx += (tx - mx) * (lite ? 0.03 : 0.045);                  // slow, weighty drift
+    my += (ty - my) * (lite ? 0.03 : 0.045);
+    pulse *= 0.94;                                            // tap ripple decays
+    boostGoal = Math.max(boostGoal, pulse);
     boost += (boostGoal - boost) * 0.08;
     scrollSmooth += (scrollN - scrollSmooth) * 0.08;
 
-    gl.uniform1f(uTime, (performance.now() - start) / 1000);
+    gl.uniform1f(uTime, now);
     gl.uniform2f(uMouse, mx, my);
     gl.uniform1f(uScroll, scrollSmooth);
     gl.uniform1f(uBoost, boost);
